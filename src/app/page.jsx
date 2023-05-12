@@ -14,12 +14,12 @@ export default function Splash() {
     
     <div id="main" className='h-screen w-screen bg-[#FFC83A] flex items-center justify-center font-dongle'>
 
-      <div className='h-[90%] w-[80%] flex flex-col p-4 mt-[5rem]'>
+      <div className='h-[90%] w-[80%] flex flex-col p-4 mt-[10rem]'>
         {/* <div className='h-[300px] w-[300px] flex items-center justify-center'>
           <BsPhone style={{color: 'gray'}} size={300}/>
         </div> */}
         <h1 className='mx-auto text-[25px] text-slate-400'>Oops Device compatibility error</h1>
-        <p className='text-center text-[17px] text-slate-400'>We noticed you opened this on a desktop.This application was designed to give maximum user experience to mobile users. Try opening this site on a mobile device : </p>
+        <p className='text-center text-[15px] text-slate-400'>We noticed you opened this on a desktop.This application was designed to give maximum user experience to mobile users. Try opening this site on a mobile device</p>
       </div>
       
       {/* <div id='desktop' className='mx-auto p-8 relative top-[20%] h-[500px] w-[90%] flex flex-col items-center bg-slate-600 sm:hidden'>
