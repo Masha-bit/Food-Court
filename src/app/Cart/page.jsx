@@ -16,7 +16,7 @@ const Cart = ({ items }) => {
       </div>
 
       <div>
-        {
+        {/* {
           items != ''
             ? items.map((item, index) => <div key={index}>{item}</div>)
             : null
@@ -28,7 +28,7 @@ const Cart = ({ items }) => {
 
           //    ): null
           //   }
-        }
+        } */}
       </div>
     </div>
   );

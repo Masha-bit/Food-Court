@@ -15,8 +15,7 @@ export default function NoInternet() {
                 not available please check or try again.
                 </p>
 
-                <div className='my-6' onClick={()=> window.location.reload
-        }>
+                <div className='my-6'>
                     <Button buttonText={'Try Again'} buttonLink={'./NoInternet'}/>
                 </div>
             </div>
