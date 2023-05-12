@@ -1,0 +1,177 @@
+[
+    {
+      "id":"food",
+      "url": "public/food/SpecialFriedRice.png",
+      "name": "Special Fried Rice",
+      "description": "Delicious fully loaded fried rice with bits of chicken, prawn, sausages & mixed veg. Served with your choice of sauce.",
+      "price" : "3, 900"  
+   },
+{
+   "id":"food",
+   "url": "public/food/BeefFriedRice.png",
+   "name": "Beef Fried Rice",
+   "description": "Fried rice with minced beef & mixed veg. Served with your choice of sauce",
+   "price": "3, 100"
+},
+{
+  "id":"food",
+  "url": "public/food/SpecialChowMeinNoodles.png" ,
+  "name": "Special Chow Mein Noodles",
+  "description": "Fully loaded chow mein noodles with chicken, prawn, sausages & mixed veg. Served with choice of sauce.",
+  "price": "3, 900"
+},
+{
+  "id":"snack",
+  "url": "public/food/PrawnMayoSpringRolls.png",
+  "name": "Prawn Mayo Spring Rolls",
+  "description": "Crispy deep fried spring rolls stuffed with prawn & mayonnaise + dipping sauce of choice",
+  "price": "1, 600"
+},
+{
+  "id":"food",
+  "url": "public/food/ChickenSingaporeNoodles.png" ,
+  "name": "Chicken Singapore Noodles",
+  "description": "Singapore stir fried noodles with bits of chicken and mixed veg. Served with your choice of sauce.",
+  "price": "3, 400"
+},
+{
+  "id":"sides",
+  "url": "public/food/WingKing.png",
+  "name": "Wing King",
+  "description": "Grilled Chicken heavily seasoned with morterella and veg mix.",
+  "price": "1, 800"
+},
+{
+  "id":"snack",
+  "url": "public/food/SmokedChickenWingsSpicyChickenSandwich.png",
+  "name": "Smoked Chicken Sandwich",
+  "description": "Crispy fried chicken with purple cabbage sauce, sour cream & hot sauce in a toasted bun. Served with choice of fries.",
+  "price": "1, 900"
+},
+{
+  "id":"sides",
+  "url": "public/food/GrilledChickenSalad.png",
+  "name": "Grilled Chicken Salad",
+  "description": "Grilled chicken breast in a garden salad bed.",
+  "price": "1, 300"
+},
+{
+  "id":"snack",
+  "url": "public/food/PeriPeriChickenToastie.png",
+  "name": "Peri Peri Chicken Toastie",
+  "description": "Peri-peri chicken, cheese & special sauce toastie. Served with choice of fries.",
+  "price": "1, 200"
+},
+{
+  "id":"snack",
+  "url": "public/food/ChickenClubSandwich.png",
+  "name": "Chicken Club Sandwich",
+  "description": "Classic chicken club sandwich with all the trimmings. Served with choice of sides.",
+  "price": "1, 200"
+},
+{
+  "id":"sides",
+  "url": "public/food/SuyaChickenFries.png",
+  "name": "Suya Chicken Fries",
+  "description": "French fries topped with chopped suya chicken, veg, chili mayo & sauces",
+  "price": "2, 300"
+},
+{
+  "id":"sides",
+  "url": "public/food/BeefChilliCheeseFries.png",
+  "name": "Beef Chili Cheese Fries",
+  "description": "French fries topped with minced meat, chopped sausages, veg, cheese & sauces.",
+  "price": "2, 400"
+},
+{
+  "id":"food",
+  "url": "public/food/FullLagosBreakfast.png",
+  "name": "Full Lagos Breakfast",
+  "description": "Naija breakfast. Choice of yam, potatoes or plantain, sauteed vegtables, egg sauce & sausage.",
+  "price": "2, 000"
+},
+{
+  "id":"snack",
+  "url": "public/food/BreakfastBurger.png",
+  "name": "Breakfast Burger",
+  "description": "Loaded breakfast burger. Beef patty, sausages, eggs & lettuce. (Specify if you want onions",
+  "price": "2, 900"
+},
+{
+  "id":"sauce",
+  "url": "public/food/EgusiSoup.png",
+  "name": "Egusi Soup",
+  "description": "Mama\"s special egusi recipe. Served with choice of swallow & protein.",
+  "price": "3, 200"
+},
+{
+  "id":"sauce",
+  "url": "public/food/AfangSoup.png",
+  "name": "Afang Soup",
+  "description": "Classic afang soup, Served with choice of swallow & protein",
+  "price": "3, 200"
+},
+{
+  "id":"sauce",
+  "url": "public/food/SeafoodOkra.png",
+  "name": "Seafood Okra",
+  "description": "",
+  "price": "3, 200"
+},
+{
+  "id":"sauce",
+  "url": "public/food/Yam&PotatoPorridge.png",
+  "name": "Yam & Potato Porridge (Asaro)",
+  "description": "Delicious native yam and potato porridge. Served with choice of protein.",
+  "price": "3, 200"
+},
+{
+  "id":"sauce",
+  "url": "public/food/EwaAgoyin.png",
+  "name": "Ewa Agoyin",
+  "description": "Delicious classic ewa agoyin, Served with choice of protein & sides",
+  "price": "3, 100"
+},
+{
+  "id":"food",
+  "url": "public/food/OfadaRice.png",
+  "name": "Ofada Rice",
+  "description": "Mama\"s native ofada with rich ayamase sauce. Served with choice of protein & sides.",
+  "price": "3, 200"
+},
+{
+  "id":"snack",
+  "url": "public/food/OGBurger.png",
+  "name": "OG Burger",
+  "description": "Premium beef patty with egg, sausage, lettuce & special sauce. (specify if you don\"t want onions).",
+  "price": "2, 100"
+},
+{
+  "id":"snack",
+  "url": "public/food/LoadedHotDog.png",
+  "name": "Loaded Hot Dog",
+  "description": "Minced brisket, sausage, bacon bits, onions, jalapeño with special sauce topped with parsley crumbs.",
+  "price": "2, 400"
+},
+{
+  "id":"snack",
+  "url": "public/food/BuffaloChickenFries.png",
+  "name": "Buffalo Chicken Fries",
+  "description": "French fries with chopped buffalo chicken, cheese & sauce.",
+  "price": "2, 400"
+},
+{
+  "id":"snack",
+  "url": "public/food/TopDog.png",
+  "name": "Top Dog",
+  "description": "Loaded Hot dog with chopped cajun chicken, peppers & chilli mayo.",
+  "price": "2 ,800"
+},
+{
+  "id":"snack",
+  "url": "public/food/BBQChickenWings.png",
+  "name": "BBQ Chicken Wings",
+  "description": "Smokey BBQ chicken wings (6 pc)",
+  "price": "2, 890"
+}
+  ]
