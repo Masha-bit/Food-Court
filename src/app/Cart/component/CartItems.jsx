@@ -11,11 +11,11 @@ export default function CartItems() {
     const [editIndex, seteditIndex] = useState(null)
     const addItemsHandler = (id) => {
 
+
         seteditIndex(
             editIndex => editIndex === id? null: id
         )
-        setNumberOFItems(
-            numberOFItems+1)
+        setNumberOFItems(numberOFItems+1)
     }
     const subItemsHandler = (id) => {
         setNumberOFItems(numberOFItems-1)
@@ -40,13 +40,47 @@ export default function CartItems() {
     // console.log( JSON.parse(
     //     `[{}]` || localStorage.getItem('Cart') 
     //     ))
-        
+
+    const [cart, setCart] = useState(
+        databaseFromLocalStorage
+    )
+    console.log(databaseFromLocalStorage)
+
+    const a = databaseFromLocalStorage.map((b) => b)
+    const [z, setZ] = useState(
+        a
+    )
+
+    function removeCartItemHandler(name){
+        const remainingCart = cart.filter((cartItem) => name !== cartItem.name)
+
+        console.log(`deleted`)
+        console.log(remainingCart)
+      
+
+
+        const index = databaseFromLocalStorage.findIndex(product => product.name === name)
+        if(index > -1){
+        const y = databaseFromLocalStorage.splice(index, 1)
+        setCart(y)
+        }console.log('not removed')
+        // console.log(z)
+        // console.log(index)
+
+
+        // const updatelocalstorageName = a.filter((valuename)=> valuename == name )
+
+
+        // a.includes(a[a.name])? console.log(a.filter((valuename)=> valuename != a)): console.log('blah')
+        // console.log(a.filter((valuename)=> valuename == name ))
+        setCart(remainingCart)
+    }
  
 
        
     const cartItems =
-    databaseFromLocalStorage != null?
-    databaseFromLocalStorage.map((cartItem) =>
+    cart != null?
+    cart.map((cartItem) =>
     (
         <div  key={cartItem.name} className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative ${cartItem.slug == '' || cartItem.slug == undefined? `hidden`: ``} `}>
         <div className={`h-[95px] w-[100%] rounded-normal flex items-center  bg-white font-dongle my-2 p-2 z-[2] shadow-2xl ${isActive? `text-slate-600 -translate-x-[9rem] transition-all`:`transition-all`} `}>
@@ -70,7 +104,9 @@ export default function CartItems() {
           </div>
       </div>
       <div className='w-[150px] h-[100px] flex items-center justify-around absolute top-0 right-0'>
-          <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'><MdOutlineDelete size={30}/></div>
+          <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'
+            onClick={() => removeCartItemHandler(cartItem.name)}
+          ><MdOutlineDelete size={30}/></div>
           <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'> <FiHeart size={30}/> </div>
       </div>
       </div>
