@@ -51,8 +51,8 @@ const Cart = () => {
 
   // const cart = cartItems()
   // window.alert(`Reload Cart page to save order!`)
-if(typeof window !== 'undefined'){
-if(window.document.referrer !== window.location.href)
+if(typeof window !== undefined){
+if(document.referrer !== window.location.href)
   setTimeout(
     function(){
     window.location.reload() 
