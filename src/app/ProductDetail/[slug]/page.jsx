@@ -49,8 +49,10 @@ const databaseFromLocalStorage =  JSON.parse(
             console.log(databaseFromLocalStorage)
         }   
         
-        useEffect(() => {localStorage.setItem('Cart', JSON.stringify(cart))
-          },[cart]
+        useEffect(() => {
+            window !== 'undefined'?
+            localStorage.setItem('Cart', JSON.stringify(cart)):null          
+        },[cart]
           )
       
       

@@ -5,6 +5,7 @@ import Nav from './component/Nav';
 import SwipeInstruction from './component/SwipeInstruction';
 import CartItems from './component/CartItems';
 import { gsap } from 'gsap';
+import { ReactDOM } from 'react';
 // import cartItems from './component/cart'
 
 const Cart = () => {
@@ -50,14 +51,14 @@ const Cart = () => {
 
   // const cart = cartItems()
   // window.alert(`Reload Cart page to save order!`)
-
-if(document.referrer !== window.location.href)
+if(typeof window !== 'undefined'){
+if(window.document.referrer !== window.location.href)
   setTimeout(
     function(){
     window.location.reload() 
     window.alert(`item added to cart!`)}, 100
 )
-
+    }
   return (
     <div className="p-2 flex flex-col items-center bg-slate-50" ref={component}>
       <Nav />

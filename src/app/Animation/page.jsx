@@ -129,7 +129,7 @@ export default function page() {
         <div className={`h-auto w-auto fixed top-0 left-0 z-10 ${clickState? null : 'hidden' }`} ref={navBar}>
         <div className='h-[100vh] w-[100vw]'>
         <div className='h-[100%] w-[100%] flex items-center p-2 flex-col relative bg-[#FFC83A]' ref={comp}>
-            <div ref={backArrow} className='h-[70px] w-[100%] my-10 flex items-center bg-white'>
+            <div ref={backArrow} className='h-[70px] w-[100%] my-10 flex items-center'>
             <BackArrow Click={notActive} Size={30} Style={{ color: 'black' }}/>         
             </div>
 
@@ -156,7 +156,7 @@ export default function page() {
                     </li>
                    
                     <li className='h-[70px] w-[100%] mt-[10rem] flex items-center font-dongle text-[19px]'>
-                        <Link href={'./Register/Signup'} className='flex items-center'>
+                        <Link href={'./Register'} className='flex items-center'>
                         <p>Sign-out</p>
                         <div className='h-[50px] w-[50px] flex items-center justify-center'>
                             <BsArrowRight color='black' size={30}/>

@@ -80,7 +80,7 @@ const ProfileMenu = () => {
                     </li>
                    
                     <li className='h-[70px] w-[100%] mt-[10rem] flex items-center font-dongle text-[19px]'>
-                        <Link href={'./Register/Signup'} className='flex items-center'>
+                        <Link href={'./Register'} className='flex items-center'>
                         <p>Sign-out</p>
                         <div className='h-[50px] w-[50px] flex items-center justify-center'>
                             <BsArrowRight color='black' size={30}/>

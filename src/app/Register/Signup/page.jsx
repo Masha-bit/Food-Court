@@ -121,13 +121,10 @@ const [users, setUsers] = useState({
   // function handleChange(e){
   //   setName(e.target.value)
   // }
-
-  useEffect(() => {   
-    localStorage.setItem('User Details', JSON.stringify(database))
-  //   localStorage.setItem('First Name', nme)
-  //  localStorage.setItem('Email', email)
-  //  localStorage.setItem('Password', password)
-  },[database]
+  useEffect(() => {
+    window !== 'undefined'?
+    localStorage.setItem('Cart', JSON.stringify(cart)):null          
+},[cart]
   )
   
 
