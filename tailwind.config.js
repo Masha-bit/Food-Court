@@ -13,6 +13,11 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    screens:{
+      'phone': {'min': '370px', 'max': '475px'},
+      'tablet':{'min': '640px', 'max': '767px'},
+      'laptop':'1080px',
+    },
     borderRadius:{
       'none':'0',
       'sm':'0.125rem',
@@ -22,6 +27,7 @@ module.exports = {
       'lg':'0.5rem',
       'full':'9999px',
       'new': '45px',
+      'normal': '20px',
     },
     fontFamily:{
       'dongle': 'Varela Round, sans-serif;'

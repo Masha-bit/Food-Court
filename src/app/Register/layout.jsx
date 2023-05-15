@@ -1,6 +1,11 @@
-import Button from '../Button'
+"use client"
+
+import React, { useLayoutEffect, useRef } from 'react'
+// import Button from '../Button'
 import '../globals.css'
 import Nav from './Nav'
+import { gsap } from 'gsap';
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,11 +13,53 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  
+  // creating slide in animation for pages 
+  const component = useRef(); // create a ref for the root level element (we'll use it later)
+
+  
+  let tl = gsap.timeline()
+
+  useLayoutEffect(() => {
+  // -- ANIMATION CODE HERE --
+  
+
+  let ctx = gsap.context(() => {    
+
+  tl.from(component.current, 0.8,
+     { 
+       right: -5000,
+       duration: 4, 
+       ease: "power1.inOut",
+      }
+        )
+  // tl.from("Login", 0.8,{
+  //     autoAlpha: 0,
+  //     y: 100,
+  //     ease: "power2.inOut",
+  //     // stagger: {amount : 0.3,},
+  // }, 
+  // "-=0.4")
+  }, component);
+  
+  
+  
+
+  return () => ctx.revert(); //cleanup
+
+  },[]); // <- empty dependency Array so it doesn't re-run on every render!
+  
+  useLayoutEffect? console.log("working"): "not working"
+
+
+
   return (
     <html lang="en">        
       <body className='bg-slate-100 block h-screen'>
-      <Nav/>
+        <div className='h-[100%] w-[100%] relative' ref={component}>
+        <Nav/>
         {children}
+        </div>
       </body>
     </html>
   )

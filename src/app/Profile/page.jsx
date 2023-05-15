@@ -5,6 +5,8 @@ import BackArrow from './component/BackArrow'
 import ProfileItem from './component/ProfileItem'
 
 export default function Profile() {
+    const databaseFromLocalStorage = JSON.parse(localStorage.getItem('User details') || '[]')
+    console.log(databaseFromLocalStorage)
   return (
     <div className='h-[100vh] w-[100vw]'>
         <div className='h-[100%] w-[100%] flex items-center p-2 flex-col relative bg-slate-100'>

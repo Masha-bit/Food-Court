@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-icons/app/Button';
 import foodDes from 'react-icons/app/Menu/components/foodDes';
 import Image from 'next/image';
@@ -11,35 +11,75 @@ import Divider from '../Divider';
 // import cartItems from 'react-icons/app/Cart/component/cart';
 import Cart from 'react-icons/app/Cart/page';
 
-
-const ProductScreen = ({ addtoCart}) => {
-
-
-    //add to cartHandler
-    const [items, setItems] = useState([])
-    const [newItem, setNewItem] = useState('')
-
-    const addtoCartHandler = () => {
-        // const {data} = foodDes  
-        console.log(`added ${product.name} to cart`)
-        setNewItem(product.name)        
-        addtoCart(newItem)
-        setItems([...items, newItem])  
-        // console.log(cart)
-        // cart.push(product.name)
-        // // cartItems.push(product.name)
-        // console.log(cart)        
-      }
-      
+const databaseFromLocalStorage =  JSON.parse(
     
-
+    localStorage.getItem('Cart') || `[{}]`
+    )
     
+    const ProductScreen = ({ addtoCart}) => {
 
     const router = useParams();
-    console.log(router)
-
+    console.log(router)  
     const { slug } = router;
     const product = foodDes.foodPlates.find(a => a.slug === slug);
+
+
+    // const [database, setDatabase] = useState(
+    //     databaseFromLocalStorage  
+    //   )
+    const [cart, setCart] = useState(
+        databaseFromLocalStorage
+        // [product]
+        )
+        
+        const addToCartHandler = () =>{
+            // localStorage.clear("Cart")
+            // setDatabase([
+            //     ...database,
+            //     product
+            // ])
+            !databaseFromLocalStorage.map(a => a.slug).includes(product.slug)?
+            setCart([
+                ...cart,
+                product
+            ]):
+            console.log(!databaseFromLocalStorage.map(a => a.slug).includes(product.slug))
+            console.log(product.slug)
+            console.log(databaseFromLocalStorage.map(a => a.slug))
+            console.log(databaseFromLocalStorage)
+        }   
+        
+        useEffect(() => {localStorage.setItem('Cart', JSON.stringify(cart))
+          },[cart]
+          )
+      
+      
+      
+      //add to cartHandler
+    //   const [items, setItems] = useState([])
+    //   const [newItem, setNewItem] = useState('')
+      
+    //   const addtoCartHandler = () => {
+    //       // const {data} = foodDes  
+    //       console.log(`added ${product.name} to cart`)
+    //     setNewItem(product.name)        
+    //     addtoCart(newItem)
+    //     setItems([...items, newItem])  
+    //     // console.log(cart)
+    //     // cart.push(product.name)
+    //     // // cartItems.push(product.name)
+    //     // console.log(cart)        
+    // }
+    
+    
+    
+    
+    
+   
+    
+
+
+
     if(!product){
         return (
             <div>
@@ -47,8 +87,8 @@ const ProductScreen = ({ addtoCart}) => {
             </div>
         )
     }
-  return(
-    <div className='h-[90%] w-[100%] flex flex-col items-center p-1 font-dongle overflow-y-auto bg-gray-100'>     
+    return(
+        <div className='h-[90%] w-[100%] flex flex-col items-center p-1 font-dongle overflow-y-auto bg-gray-100'>     
         
         {/* image div  */}
         <div>
@@ -109,7 +149,7 @@ const ProductScreen = ({ addtoCart}) => {
           {/* divider  */}
           <Divider/>
 
-        <div className='h-auto w-[70%]' onClick={addtoCartHandler}>
+        <div className='h-auto w-[70%]' onClick={addToCartHandler}>
             <Button buttonLink={'./Cart'} buttonText={'Add to cart'}/>
         </div>
 
