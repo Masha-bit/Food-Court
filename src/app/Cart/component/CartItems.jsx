@@ -31,7 +31,7 @@ export default function CartItems() {
    
         const databaseFromLocalStorage =
         //  useEffect(()=>{
-            typeof window !== undefined?
+            typeof window !== "undefined"?
             JSON.parse(
             localStorage.getItem('Cart') || `[{}]` 
             ):null
