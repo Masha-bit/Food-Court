@@ -33,7 +33,7 @@ export default function Splash() {
           <p className='mt-6'>There is a problem viewing this page. Please switch to Mobile view</p>
       </div> */}
 
-      <div id='mobile' className='laptop:hidden h-[100%] w-[100%] bg-[#00000000] flex flex-col p-2 font-dongle border-2'>
+      <div id='mobile' className='laptop:hidden h-[100%] w-[100%] bg-[#00000000] flex flex-col p-2 font-dongle'>
         <div className='w-[100%] mt-8'>
         <Image src={logo} alt='aptech_logo' className='relative ml-[8%]'/>
         </div>

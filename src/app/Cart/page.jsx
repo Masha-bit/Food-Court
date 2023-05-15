@@ -53,15 +53,16 @@ const Cart = () => {
   // window.alert(`Reload Cart page to save order!`)
 
 
-  useEffect(() => {
-    if(typeof window !== undefined){
-      if(window.document.referrer !== window.location.href)
+  // useEffect(() => {
+    typeof window !== 'undefined'?
+      (document.referrer !== window.location.href)?
+      console.log('working') &
         setTimeout(
           function(){
           window.location.reload() 
           window.alert(`item added to cart!`)}, 100
-      )}
-          })
+      ):null:null
+          // })
 
     
   return (
