@@ -43,7 +43,7 @@ export default function CartItems() {
         
  
 
-  
+       if(databaseFromLocalStorage !== null){
     const cartItems = databaseFromLocalStorage.map((cartItem) =>
     (
         <div  key={cartItem.name} className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative ${cartItem.slug == '' || cartItem.slug == undefined? `hidden`: ``} `}>
@@ -72,7 +72,10 @@ export default function CartItems() {
           <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'> <FiHeart size={30}/> </div>
       </div>
       </div>
-    ))
+    ))}
+    (
+        <div>Not rendereing localStorage</div>
+    )
     console.log(databaseFromLocalStorage)
 
     
