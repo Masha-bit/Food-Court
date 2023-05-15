@@ -45,7 +45,7 @@ export default function CartItems() {
 
        
     const cartItems =
-    databaseFromLocalStorage !== 'null'?
+    databaseFromLocalStorage != null?
     databaseFromLocalStorage.map((cartItem) =>
     (
         <div  key={cartItem.name} className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative ${cartItem.slug == '' || cartItem.slug == undefined? `hidden`: ``} `}>
