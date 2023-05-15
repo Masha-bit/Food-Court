@@ -1,12 +1,53 @@
 'use client';
 
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react'
 import Nav from './component/Nav';
 import SwipeInstruction from './component/SwipeInstruction';
 import CartItems from './component/CartItems';
+import { gsap } from 'gsap';
 // import cartItems from './component/cart'
 
 const Cart = () => {
+    
+  // creating slide in animation for pages 
+  const component = useRef(); // create a ref for the root level element (we'll use it later)
+
+  
+  let tl = gsap.timeline()
+
+  useLayoutEffect(() => {
+  // -- ANIMATION CODE HERE --
+  
+
+  let ctx = gsap.context(() => {    
+
+  tl.from(component.current, 0.8,
+     { 
+       right: -5000,
+       duration: 4, 
+       ease: "power1.inOut",
+      }
+        )
+  // tl.from("Login", 0.8,{
+  //     autoAlpha: 0,
+  //     y: 100,
+  //     ease: "power2.inOut",
+  //     // stagger: {amount : 0.3,},
+  // }, 
+  // "-=0.4")
+  }, component);
+  
+  
+  
+
+  return () => ctx.revert(); //cleanup
+
+  },[]); // <- empty dependency Array so it doesn't re-run on every render!
+  
+  useLayoutEffect? console.log("working"): "not working"
+
+
+
   // const cart = cartItems()
   // window.alert(`Reload Cart page to save order!`)
 
@@ -18,7 +59,7 @@ if(document.referrer !== window.location.href)
 )
 
   return (
-    <div className="p-2 flex flex-col items-center bg-slate-50">
+    <div className="p-2 flex flex-col items-center bg-slate-50" ref={component}>
       <Nav />
       <div className="h-[70px] w-[70%]  my-4 flex items-center justify-center">
         <SwipeInstruction />
