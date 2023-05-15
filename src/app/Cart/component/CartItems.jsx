@@ -37,9 +37,9 @@ export default function CartItems() {
             ):null
     // })
     console.log(typeof window !== undefined)
-    console.log( JSON.parse(
-        `[{}]` || localStorage.getItem('Cart') 
-        ))
+    // console.log( JSON.parse(
+    //     `[{}]` || localStorage.getItem('Cart') 
+    //     ))
         
  
 
