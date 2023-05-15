@@ -28,7 +28,9 @@ export default function Home() {
                     {/* {props.Hamburger} */}
                 </div>
                 <div>
+                    <Link href={'./Cart'}>
                     <CgShoppingCart size={30} style={{color: 'gray'}}/>
+                    </Link>
                 </div>
             </div>
 
