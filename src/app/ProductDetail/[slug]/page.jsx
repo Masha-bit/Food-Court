@@ -11,10 +11,15 @@ import Divider from '../Divider';
 // import cartItems from 'react-icons/app/Cart/component/cart';
 import Cart from 'react-icons/app/Cart/page';
 
-const databaseFromLocalStorage =  JSON.parse(
-    
-    localStorage.getItem('Cart') || `[{}]`
-    )
+
+const databaseFromLocalStorage =
+//  useEffect(()=>{
+    typeof window !== undefined?
+    JSON.parse(
+    localStorage.getItem('Cart') ||
+    `[{}]`
+    ):null
+// })
     
     const ProductScreen = ({ addtoCart}) => {
 
@@ -28,7 +33,7 @@ const databaseFromLocalStorage =  JSON.parse(
     //     databaseFromLocalStorage  
     //   )
     const [cart, setCart] = useState(
-        databaseFromLocalStorage
+        databaseFromLocalStorage 
         // [product]
         )
         
@@ -50,10 +55,12 @@ const databaseFromLocalStorage =  JSON.parse(
         }   
         
         useEffect(() => {
-            window !== 'undefined'?
-            localStorage.setItem('Cart', JSON.stringify(cart)):null          
-        },[cart]
-          )
+            if(window !== 'undefined'){
+            localStorage.setItem('Cart', JSON.stringify(cart))         
+        ,[cart]
+    }})
+
+    
       
       
       

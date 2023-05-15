@@ -6,32 +6,35 @@ const bttn = "Signup"
 const bttnLink = "./Register/Login"
 
 
-const databaseFromLocalStorage = JSON.parse(
-localStorage.getItem('User Details') ||
-  `[
-    {
-      "name" : "Christopher",
-      "lastname" : "Masha",
-      "email" : "mashachristopherjr@gmail.com",
-      "password" :"ADMIN"
-    }]
-`
-    )
-
 export default function Signup(){
+  // const databaseFromLocalStorage =
+  // useEffect(() => {
+  //   if(window !== undefined){
+  //     JSON.parse(
+  //       localStorage.getItem('User Details') ||
+  //         `[
+  //           {
+  //             "name" : "Christopher",
+  //             "lastname" : "Masha",
+  //             "email" : "mashachristopherjr@gmail.com",
+  //             "password" :"ADMIN"
+  //           }]
+  //       `
+  //           )
+  //   }})
 
   // const [name, setName] = useState('')
   // setName()
 
   const [database, setDatabase] = useState(
   
-    // {
-    //   name : 'Christopher',
-    //   lastname: 'Masha',
-    //   email : 'mashachristopherjr@gmail.com',
-    //   password:'ADMIN'
-    // },
-    databaseFromLocalStorage
+    {
+      name : 'Christopher',
+      lastname: 'Masha',
+      email : 'mashachristopherjr@gmail.com',
+      password:'ADMIN'
+    },
+    // databaseFromLocalStorage
   
   
   // databaseFromLocalStorage
@@ -121,11 +124,11 @@ const [users, setUsers] = useState({
   // function handleChange(e){
   //   setName(e.target.value)
   // }
-  useEffect(() => {
-    window !== 'undefined'?
-    localStorage.setItem('Cart', JSON.stringify(cart)):null          
-},[cart]
-  )
+//   useEffect(() => {
+//     if(window !== undefined){
+//     localStorage.setItem('Cart', JSON.stringify(database))          
+// ,[database]
+//     }})
   
 
   return (
@@ -154,15 +157,9 @@ const [users, setUsers] = useState({
         <input type="checkbox" name="tandc" id="tandc" className='w-[auto] h-[auto] border-b-2 bg-transparent border-black px-2 outline-none' required /><label htmlFor="tandc" className='text-[15px] text-gray-500 ml-3'>I agree to all the Terms and Conditions.</label>
       </div>
       
-      <button className='mt-[5rem]' onClick={submitToDatabase}>
-        <div className='max-h-[70px] w-[250px] max-w-[314px bg-white hover:bg-[#e7ad19] my-4 mx-auto rounded-full p-5 flex items-center text-[#FFC83A] hover:text-black text-[23px] transition-all'>
-          <div className='my-0 mx-auto font-dongle'>
-            {bttn}
-          </div>      
-        </div>
-
-        {/* <Button buttonText={bttn} buttonLink={bttnLink}/> */}
-      </button>
+      <div className='mt-[5rem]'>
+        <Button buttonText={bttn} buttonLink={bttnLink}/>
+      </div>
     </form>
   )
 }

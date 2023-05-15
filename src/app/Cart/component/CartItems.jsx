@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {MdOutlineDelete} from 'react-icons/md'
 import {FiHeart} from 'react-icons/fi'
 import Image from 'next/image'
@@ -27,13 +27,24 @@ export default function CartItems() {
         console.log(databaseFromLocalStorage.map((a)=> a.name).includes(undefined) || databaseFromLocalStorage.map((a)=> a.name).includes(''))
         setIsActive(current => !current)
     }
-    const databaseFromLocalStorage =  JSON.parse(
-        localStorage.getItem('Cart') ||
-        `[{}]`
-        )
+    
+   
+        const databaseFromLocalStorage =
+        //  useEffect(()=>{
+            typeof window !== undefined?
+            JSON.parse(
+            localStorage.getItem('Cart') || `[{}]` 
+            ):null
+    // })
+    console.log(typeof window !== undefined)
+    console.log( JSON.parse(
+        `[{}]` || localStorage.getItem('Cart') 
+        ))
+        
+ 
 
   
-    const cartItems = databaseFromLocalStorage.map((cartItem, index) =>
+    const cartItems = databaseFromLocalStorage.map((cartItem) =>
     (
         <div  key={cartItem.name} className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative ${cartItem.slug == '' || cartItem.slug == undefined? `hidden`: ``} `}>
         <div className={`h-[95px] w-[100%] rounded-normal flex items-center  bg-white font-dongle my-2 p-2 z-[2] shadow-2xl ${isActive? `text-slate-600 -translate-x-[9rem] transition-all`:`transition-all`} `}>
@@ -62,6 +73,7 @@ export default function CartItems() {
       </div>
       </div>
     ))
+    console.log(databaseFromLocalStorage)
 
     
 
