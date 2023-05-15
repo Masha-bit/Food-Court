@@ -12,10 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">        
       <body className='bg-slate-100 block h-screen'>
-        <div className='h-[100%] w-[100%] relative'>
-        <Nav/>
         {children}
-        </div>
       </body>
     </html>
   )
