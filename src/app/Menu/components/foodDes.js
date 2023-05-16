@@ -37,7 +37,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
         name: 'Breakfast Burger',
         slug: 'breakfast-burger',
         description: 'Loaded breakfast burger. Beef patty, sausages, eggs & lettuce. (Specify if you want onions',
-        price: '2, 900'
+        price: 2900,
+        quantity : 1
       },
   {
      id:'food',
@@ -45,7 +46,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
      name: 'Special Fried Rice',
      slug: 'special-fried-rice',
      description: 'Delicious fully loaded fried rice with bits of chicken, prawn, sausages & mixed veg. Served with your choice of sauce.',
-     price: '3, 900'
+     price: 3900,
+     quantity: 1
   
   },
   {
@@ -54,7 +56,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
      name: 'Beef Fried Rice',
      slug: 'beef-fried-rice',
      description: 'Fried rice with minced beef & mixed veg. Served with your choice of sauce',
-     price: '3, 100'
+     price: 3100,
+     quantity: 1
   },
   {
     id:'food',
@@ -62,7 +65,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Special ChowMein Noodles',
     slug: 'special-chowmein-noodles',
     description: 'Fully loaded chow mein noodles with chicken, prawn, sausages & mixed veg. Served with choice of sauce.',
-    price: '3, 900'
+    price: 3900,
+    quantity: 1
   },
   {
     id:'snack',
@@ -70,7 +74,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Prawn MayoSpring Rolls',
     slug: 'prawn-mayospring-rolls',
     description: 'Crispy deep fried spring rolls stuffed with prawn & mayonnaise + dipping sauce of choice',
-    price: '1, 600'
+    price: 1600,
+    quantity: 1
   },
   {
     id:'food',
@@ -78,7 +83,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Chicken Singapore Noodles',
     slug: 'chicken-singapore-noodles',
     description: 'Singapore stir fried noodles with bits of chicken and mixed veg. Served with your choice of sauce.',
-    price: '3, 400'
+    price: 3400,
+    quantity: 1
   },
   {
     id:'sides',
@@ -86,7 +92,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Wing King',
     slug: 'wing-king',
     description: 'Grilled Chicken heavily seasoned with morterella and veg mix.',
-    price: '1, 800'
+    price: 1800,
+    quantity: 1
   },
   {
     id:'snack',
@@ -94,7 +101,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Smoked Chicken Sandwich',
     slug: 'smoked-chicken-sandwich',
     description: 'Crispy fried chicken with purple cabbage sauce, sour cream & hot sauce in a toasted bun. Served with choice of fries.',
-    price: '1, 900'
+    price: 1900,
+    quantity: 1
   },
   {
     id:'sides',
@@ -102,7 +110,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Grilled Chicken Salad',
     slug: 'grilled-chicken-salad',
     description: 'Grilled chicken breast in a garden salad bed.',
-    price: '1, 300'
+    price: 1300,
+    quantity: 1
   },
   {
     id:'snack',
@@ -110,7 +119,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Peri Peri Chicken Toastie',
     slug: 'peri-peri-chicken-toastie',
     description: 'Peri-peri chicken, cheese & special sauce toastie. Served with choice of fries.',
-    price: '1, 200'
+    price: 1200,
+    quantity: 1
   },
   {
     id:'snack',
@@ -118,7 +128,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Chicken Club Sandwich',
     slug: 'chicken-club-sandwich',
     description: 'Classic chicken club sandwich with all the trimmings. Served with choice of sides.',
-    price: '1, 200'
+    price: 1200,
+    quantity: 1
   },
   {
     id:'sides',
@@ -126,7 +137,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Suya Chicken Fries',
     slug: 'suya-chicken-fries',
     description: 'French fries topped with chopped suya chicken, veg, chili mayo & sauces',
-    price: '2, 300'
+    price: 2300,
+    quantity: 1
   },
   {
     id:'sides',
@@ -134,7 +146,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Beef Chili Cheese Fries',
     slug: 'beef-chilli-cheese-fries',
     description: 'French fries topped with minced meat, chopped sausages, veg, cheese & sauces.',
-    price: '2, 400'
+    price: 2400,
+    quantity: 1
   },
   {
     id:'food',
@@ -142,7 +155,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Full Lagos Breakfast',
     slug: 'full-lagos-breakfast',
     description: 'Naija breakfast. Choice of yam, potatoes or plantain, sauteed vegtables, egg sauce & sausage.',
-    price: '2, 000'
+    price: 2000,
+    quantity: 1
   },
   {
     id:'sauce',
@@ -150,7 +164,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Egusi Soup',
     slug: 'egusi-soup',
     description: 'Mama\'s special egusi recipe. Served with choice of swallow & protein.',
-    price: '3, 200'
+    price: 3200,
+    quantity: 1
   },
   {
     id:'sauce',
@@ -158,7 +173,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Afang Soup',
     slug: 'afang-soup',
     description: 'Classic afang soup, Served with choice of swallow & protein',
-    price: '3, 200'
+    price: 3200,
+    quantity: 1
   },
   {
     id:'sauce',
@@ -166,7 +182,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Seafood Okra',
     slug: 'seafood-okra',
     description: '',
-    price: '3, 200'
+    price: 3200,
+    quantity: 1
   },
   {
     id:'sauce',
@@ -174,7 +191,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Yam & Potato Porridge',
     slug: 'yam-potato-porridge',
     description: 'Delicious native yam and potato porridge. Served with choice of protein.',
-    price: '3, 200'
+    price: 3200,
+    quantity: 1
   },
   {
     id:'sauce',
@@ -182,7 +200,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Ewa Agoyin',
     slug: 'ewa-agoyin',
     description: 'Delicious classic ewa agoyin, Served with choice of protein & sides',
-    price: '3, 100'
+    price: 3100,
+    quantity: 1
   },
   {
     id:'food',
@@ -190,7 +209,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Ofada Rice',
     slug: 'ofada-rice',
     description: 'Mama\'s native ofada with rich ayamase sauce. Served with choice of protein & sides.',
-    price: '3, 200'
+    price: 3200,
+    quantity: 1
   },
   {
     id:'snack',
@@ -198,7 +218,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'OG Burger',
     slug: 'og-burger',
     description: 'Premium beef patty with egg, sausage, lettuce & special sauce. (specify if you don\'t want onions).',
-    price: '2, 100'
+    price: 2100,
+    quantity: 1
   },
   {
     id:'snack',
@@ -206,7 +227,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Loaded Hot Dog',
     slug: 'loaded-hot-dog',
     description: 'Minced brisket, sausage, bacon bits, onions, jalapeño with special sauce topped with parsley crumbs.',
-    price: '2, 400'
+    price: 2400,
+    quantity: 1
   },
   {
     id:'snack',
@@ -214,7 +236,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Buffalo Chicken Fries',
     slug: 'buffalo-chicken-fries',
     description: 'French fries with chopped buffalo chicken, cheese & sauce.',
-    price: '2, 400'
+    price: 2400,
+    quantity: 1
   },
   {
     id:'snack',
@@ -222,7 +245,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'Top Dog',
     slug: 'top-dog',
     description: 'Loaded Hot dog with chopped cajun chicken, peppers & chilli mayo.',
-    price: '2 ,800'
+    price: 2800,
+    quantity: 1
   },
   {
     id:'snack',
@@ -230,7 +254,8 @@ import yam_potato_porridge from '/public/food/Yam&PotatoPorridge.png'
     name: 'BBQ Chicken Wings',
     slug: 'bbq-chicken-wings',
     description: 'Smokey BBQ chicken wings (6 pc)',
-    price: '2, 890'
+    price: 2890,
+    quantity: 1
   }
     ]
 }
