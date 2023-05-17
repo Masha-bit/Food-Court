@@ -97,7 +97,7 @@ export default function CartItems() {
     const favoriteDatabaseFromLocalStorage =
 //  useEffect(()=>{
     typeof window !== "undefined"?
-    JSON.parse(  localStorage.getItem('Favorite') 
+    JSON.parse(localStorage.getItem('Favorite') || `[{}]` 
     ): null
 // })
 
@@ -144,7 +144,7 @@ export default function CartItems() {
         )
     }
     function addToFavorite(name){
-        console.log(favoriteDatabaseFromLocalStorage)
+        // console.log(favoriteDatabaseFromLocalStorage)
         if(!favorite.map(a => a.name).includes(product(name).name)){
             setLikeButton(Liked)
             setfavorite([
