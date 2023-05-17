@@ -96,7 +96,7 @@ export default function CartItems() {
 
     const favoriteDatabaseFromLocalStorage =
 //  useEffect(()=>{
-    typeof window !== undefined?
+    typeof window !== "undefined"?
     JSON.parse(  localStorage.getItem('Favorite') 
     ): null
 // })
