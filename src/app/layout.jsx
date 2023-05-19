@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       {/* <link rel="preconnect" href="https://fonts.googleapis.com"/> */}
     {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/> */}
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"/>
-      <body>
+      <body className='h-[100vh] w-[100vw]'>
         {children}
       </body>
     </html>

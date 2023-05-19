@@ -3,11 +3,11 @@ import Nav from './component/Nav';
 import Image from 'next/image'
 import review from '/public/asset/review.png'
 import Button from '../Button';
-import SwipeAnimation from '../SwipeAnimation';
+// import SwipeAnimation from '../SwipeAnimation';
 
 export default function Review() {
   return (
-    <SwipeAnimation>
+    // <SwipeAnimation>
     <div className='h-[100vh] w-[100vw] '>
         <div className='h-[100%] w-[100%] p-2 flex flex-col items-center bg-slate-200'>
         <Nav/>            
@@ -25,6 +25,6 @@ export default function Review() {
             </div>
         </div>
     </div>
-    </SwipeAnimation>
+    // </SwipeAnimation>
   )
 }

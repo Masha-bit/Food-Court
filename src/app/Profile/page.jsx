@@ -9,7 +9,7 @@ export default function Profile() {
     // const databaseFromLocalStorage = JSON.parse(localStorage.getItem('User details') || '[]')
     // console.log(databaseFromLocalStorage)
   return (
-    <SwipeAnimation>
+    // <SwipeAnimation>
     <div className='h-[100vh] w-[100vw]'>
         <div className='h-[100%] w-[100%] flex items-center p-2 flex-col relative bg-slate-100'>
             <div className='h-[70px] w-[100%] my-10 flex items-center'>
@@ -58,6 +58,6 @@ export default function Profile() {
             </div>
         </div>
     </div>
-    </SwipeAnimation>
+    // {/* </SwipeAnimation> */}
   )
 }

@@ -29,6 +29,7 @@ const databaseFromLocalStorage =
     const router = useParams();
     console.log(router)  
     const { slug } = router;
+    
     const product = foodDes.foodPlates.find(a => a.slug === slug);
 
 

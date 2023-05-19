@@ -12,7 +12,7 @@ import Divider from './component/Divider';
 const Cart = () => {
   
   return (
-    <SwipeAnimation>
+    // <SwipeAnimation>
     <div className='h-[100vh] w-[100vw] bg-[#F5F5F8]'>
     <div className="p-2 flex flex-col items-center font-dongle">
       <Nav />
@@ -44,7 +44,7 @@ const Cart = () => {
       </div>
     </div>
     </div>
-    </SwipeAnimation>
+    // </SwipeAnimation>
   );
 };
 

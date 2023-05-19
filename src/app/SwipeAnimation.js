@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { gsap } from 'gsap';
+import './globals.css'
 
 const SwipeAnimation = ({ children }) => {
   const { direction } = useParams();
@@ -36,7 +37,7 @@ const SwipeAnimation = ({ children }) => {
     };
   }, [direction]);
 
-  return ( <div id="swipe-container" className='max-h-[100%]'>{children}</div> );
+  return ( <div id="swipe-container" className='h-screen w-screen'>{children}</div> );
 };
 
 export default SwipeAnimation;

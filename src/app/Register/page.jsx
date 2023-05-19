@@ -7,12 +7,12 @@ import SwipeAnimation from '../SwipeAnimation'
 
 export default function Register() {
   return (
-    <SwipeAnimation>
-    <div className='h-auto overflow-y-hidden' >
+    // <SwipeAnimation> 
+    <div >
       <div>
       <Login/>
       </div>
     </div>
-    </SwipeAnimation>
+    // {/* </SwipeAnimation> */}
   )
 }

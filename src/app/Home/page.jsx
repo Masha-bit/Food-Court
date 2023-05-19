@@ -72,9 +72,9 @@ export default function page() {
    
 
   return (
-    <SwipeAnimation>
+    // <SwipeAnimation> 
     <div className='h-[100vh] w-[100vw] bg-green-200 relative'>
-        {/* <div className='h-auto w-auto'> */}
+        <div className='h-auto w-auto'>
         <div className='h-screen w-screen flex justify-center items-center bg-gray-200 font-dongle'>
         <div className='h-[90%] w-[90%] bg-gray-200 flex flex-col items-center'>
             <div className='flex flex-row h-[60px] w-[90%] justify-between'>
@@ -173,7 +173,7 @@ export default function page() {
         </div>
     </div>
         </div>
-    {/* </div> */}
-    </SwipeAnimation>
+    </div>
+    // </SwipeAnimation> 
   )
 }

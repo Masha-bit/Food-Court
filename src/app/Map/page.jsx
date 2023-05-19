@@ -4,7 +4,7 @@ import SwipeAnimation from 'react-icons/app/SwipeAnimation'
 
 export default function page() {
   return (
-    <SwipeAnimation>
+    // <SwipeAnimation>
         <div>
             <div>
                 <Image>
@@ -12,6 +12,6 @@ export default function page() {
                 </Image>
             </div>
         </div>
-    </SwipeAnimation>
+    // </SwipeAnimation>
   )
 }
