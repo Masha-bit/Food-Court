@@ -247,9 +247,9 @@ export default function CartItems() {
             {`SubTotal : ₦${totalCartPrice}`}
             </div>
 
-            <div className='h-[auto] w-[90px] rounded-normal flex flex-col items-center  font-dongle p-2 text-[10px] bg-slate-500 border-slate-500 border-solid border-2 my-10 hover:bg-white' onClick={addToOrder}>
+            <button className='h-[auto] w-[90px] rounded-normal flex flex-col items-center  font-dongle p-2 text-[10px] bg-slate-500 border-slate-500 border-solid border-2 my-10 hover:bg-white' onClick={addToOrder}>
             save order
-            </div>
+            </button>
 
         </div>
 

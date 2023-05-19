@@ -34,7 +34,7 @@ useEffect(()=>{
 
   return (
     // <SwipeAnimation>
-    <div className='h-[100vh] w-screen overflow-y-auto bg-[#F5F5F8] '>
+    <div className='h-[auto] w-screen overflow-y-auto bg-[#F5F5F8] relative'>
     <div className="p-2 flex flex-col items-center font-dongle">
       <Nav />
 
@@ -61,7 +61,7 @@ useEffect(()=>{
         <p>₦: {order? order: '...'}</p>
       </div>
 
-      <div className='absolute bottom-0'>
+      <div className=' my-[5px] relative bottom-0'>
        <Button buttonLink='./Map' buttonText='Proceed to payment'/>
       </div>
     </div>
