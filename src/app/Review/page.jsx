@@ -1,22 +1,30 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './component/Nav';
 import Image from 'next/image'
-import review from '/public/asset/review.png'
+import reviewpng from '/public/asset/review.png'
 import Button from '../Button';
 // import SwipeAnimation from '../SwipeAnimation';
 
 export default function Review() {
-    const reviewdatabaseFromLocalStorage =
- useEffect(()=>{
-    typeof window !== undefined?
+
+    
+const [review, setReview] = useState([])
+
+useEffect(()=>{
+  const reviewdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
     JSON.parse(
     localStorage.getItem('Review') ||
-    `[]`
-    ):null
-})
+    `[{}]`
+    )
+    :null
+    console.log(reviewdatabaseFromLocalStorage)
 
+
+    reviewdatabaseFromLocalStorage? setReview(reviewdatabaseFromLocalStorage): null
+},[])
 
   return (
     // <SwipeAnimation>
@@ -24,16 +32,16 @@ export default function Review() {
         <div className='h-[100%] w-[100%] p-2 flex flex-col items-center bg-slate-200'>
         <Nav/>   
 
-        {reviewdatabaseFromLocalStorage != '[]'? (
+        {review != ''? (
             <div className='font-dongle text-[20px] h-[150px] w-[90%] p-2 bg-slate-100 rounded-lg'>
                 <p className='text-slate-400 text'>review:</p>
                 
-                <i>{`" ${reviewdatabaseFromLocalStorage} "`}</i>
+                <i>{`" ${review} "`}</i>
             </div>
         ):        
             <div className='h-[80%] w-[100%] bg-slate-200 flex flex-col items-center justify-center'>
                 <div className='h-[150px] w-[150px] bg-transparent'>
-                    <Image src={review} alt='review.png' height={150} className='' />
+                    <Image src={reviewpng} alt='review.png' height={150} className='' />
                 </div>
                 <p className='my-4 font-dongle text-[28px]'>
                     No Reviews yet

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import SwipeAnimation from 'react-icons/app/SwipeAnimation'
 import map from '/public/asset/Map.png'
@@ -13,15 +13,26 @@ import Nav from './Nav'
 
 
 export default function page() {
+
+  
+const [address, setAddress] = useState([])
+
+useEffect(()=>{
   const addressdatabaseFromLocalStorage =
-   useEffect(()=>{
-      typeof window !== undefined?
-      JSON.parse(
-      localStorage.getItem('Address') ||
-      `[]`
-      ):null
-      localStorage
-  })
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('Address') ||
+    `[{}]`
+    )
+    :null
+    console.log(addressdatabaseFromLocalStorage)
+
+
+    addressdatabaseFromLocalStorage? setAddress(addressdatabaseFromLocalStorage): null
+},[])
+
+
+  
   
 
 
@@ -63,7 +74,7 @@ export default function page() {
 
                   <div className='h-[40px] w-[100%] mx-2 flex flex-col items-center justify-center'>
                   <p className='text-slate-400 w-[100%]'>Delivery Address</p>
-                  <p className='text-[18px] w-[100%]'>{addressdatabaseFromLocalStorage}</p>
+                  <p className='text-[18px] w-[100%]'>{address}</p>
                   </div>
 
                   </div>

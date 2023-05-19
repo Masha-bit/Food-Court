@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Nav from './component/Nav';
 import { gsap } from 'gsap';
 // import { ReactDOM } from 'react';
@@ -12,18 +12,25 @@ import {AiFillBank} from 'react-icons/ai'
 import {GiMoneyStack} from 'react-icons/gi'
 import Optiongroup from './component/Optiongroup';
 
-
 const Checkout = () => {
+
+
+const [order, setOrder] = useState([])
+
+useEffect(()=>{
   const orderdatabaseFromLocalStorage =
-//  useEffect(()=>{
-    typeof window !== undefined?
+    typeof window !== "undefined"?
     JSON.parse(
     localStorage.getItem('Order') ||
-    `[]`
+    `[{}]`
     )
     :null
-// })
-console.log(orderdatabaseFromLocalStorage)
+    console.log(orderdatabaseFromLocalStorage)
+
+
+    orderdatabaseFromLocalStorage? setOrder(orderdatabaseFromLocalStorage): null
+},[])
+
 
   return (
     // <SwipeAnimation>
@@ -51,7 +58,7 @@ console.log(orderdatabaseFromLocalStorage)
 
       <div className="h-[50px] w-[80%] flex items-center justify-between font-dongle my-3">
         <p>Total</p>
-        <p>₦: {orderdatabaseFromLocalStorage? orderdatabaseFromLocalStorage: '...'}</p>
+        <p>₦: {order? order: '...'}</p>
       </div>
 
       <div className='absolute bottom-0'>

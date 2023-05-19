@@ -7,15 +7,24 @@ import Image from 'next/image'
 import { BsCart3 } from 'react-icons/bs'
 
 export default function page() {
-    const orderdatabaseFromLocalStorage =
-     useEffect(()=>{
-        typeof window !== undefined?
-        JSON.parse(
-        localStorage.getItem('Order') ||
-        `[]`
-        ):null
-    })
+
     
+const [order, setOrder] = useState([])
+
+useEffect(()=>{
+  const orderdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('Order') ||
+    `[{}]`
+    )
+    :null
+    console.log(orderdatabaseFromLocalStorage)
+
+
+    orderdatabaseFromLocalStorage? setOrder(orderdatabaseFromLocalStorage): null
+},[])
+
 
 
   return (
@@ -28,7 +37,7 @@ export default function page() {
                 <div className='h-[120px] w-[100%] bg-slate-100 rounded-lg flex items-center text-left text-[21px]'>
                    Pending order:
                    <i className='ml-3'>
-                    ₦ {orderdatabaseFromLocalStorage} 
+                    ₦ {order} 
                     </i>                 
                 </div>
             ):(
