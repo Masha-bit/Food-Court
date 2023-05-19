@@ -90,9 +90,9 @@ export default function Login() {
         
 
         
-        <button className='mt-[5rem]' type='submit'>
+        <div className='mt-[5rem]' type='submit'>
         <Button buttonText={bttn} buttonLink={bttnLink}/>
-        </button>
+        </div>
           </form>
     </div>
   )

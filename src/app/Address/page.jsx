@@ -33,7 +33,7 @@ const Address = () => {
 
   return (
     // <SwipeAnimation>
-    <div className='h-[100vh] w-[100vw] bg-[#F5F5F8]'>
+    <div className='h-[100%] w-[100vw] bg-[#F5F5F8]'>
     <div className="p-2 flex flex-col items-center font-dongle">
       <Nav />
 

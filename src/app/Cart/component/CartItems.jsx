@@ -178,9 +178,11 @@ export default function CartItems() {
     
 
     function addToOrder(){
+        useEffect(() => {
             if(window !== 'undefined'){
             localStorage.setItem('Order', JSON.stringify([totalCartPrice]))         
         ,[]  }
+        })
     }
 
  
