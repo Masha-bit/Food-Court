@@ -1,13 +1,15 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function BottomNavItems(props) {
   return (
     <div>
-        {/* <Link href={props.itemLink}> */}
+        <Link href={props.itemLink}>
         <div>
             {props.itemIcon}
         </div>
-        {/* </Link> */}
+        </Link>
     </div>
+  
   )
 }

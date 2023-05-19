@@ -11,10 +11,11 @@ export default function BottomNav() {
   return (
     <div className='w-[100%]'>
         <div className='h-[50px] w-[100%] bg-white rounded-new flex flex-row items-center justify-around px-7'>
-            <BottomNavItems itemIcon={<AiOutlineHome size={22} style={iconStyle} />}/>
-            <BottomNavItems itemIcon={<AiOutlineHeart size={22}/>}/>
-            <BottomNavItems itemIcon={<FiUser size={22}/>}/>
-            <BottomNavItems itemIcon={<GrHistory size={22}/>}/>
+          
+            <BottomNavItems itemIcon={<AiOutlineHome size={22} style={iconStyle} />} itemLink={'./Home'}/>
+            <BottomNavItems itemIcon={<AiOutlineHeart size={22}/>} itemLink={'./Favorite'}/>
+            <BottomNavItems itemIcon={<FiUser size={22}/>} itemLink={'./Profile'}/>
+            <BottomNavItems itemIcon={<GrHistory size={22}/>} itemLink={'./Order'}/>
         </div>
     </div>
   )

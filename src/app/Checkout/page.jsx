@@ -15,13 +15,13 @@ import Optiongroup from './component/Optiongroup';
 
 const Checkout = () => {
   const orderdatabaseFromLocalStorage =
- useEffect(()=>{
+//  useEffect(()=>{
     typeof window !== undefined?
     JSON.parse(
     localStorage.getItem('Order') ||
     `[]`
     ):null
-})
+// })
 
   return (
     // <SwipeAnimation>
@@ -53,7 +53,7 @@ const Checkout = () => {
       </div>
 
       <div className='absolute bottom-0'>
-       <Button buttonLink='./Payment' buttonText='Proceed to payment'/>
+       <Button buttonLink='./Map' buttonText='Proceed to payment'/>
       </div>
     </div>
     </div>

@@ -31,8 +31,6 @@ const Cart = () => {
       </div>
 
       <div className='h-[auto] w-[100%] flex items-center justify-around my-3'>
-        
-        
         <CartItems/>
       </div>
 

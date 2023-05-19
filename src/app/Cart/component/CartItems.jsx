@@ -219,7 +219,7 @@ export default function CartItems() {
           {LikeButton}
           </div>
       </div>
-      </div>
+      </div> 
     )):
     (
         <div className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative`}>Not rendereing localStorage</div>
@@ -238,14 +238,14 @@ export default function CartItems() {
 
 
   return (
-    <div className='h-[700px] w-[100vw] flex flex-col justify-around relative'>
+    <div className='h-[700px] w-[100vw] flex flex-col relative'>
 
         <div className='h-[80px] w-[100%] rounded-normal flex flex-row items-center justify-around  font-dongle p-2 absolute top-0 text-[25px]'>
             <div>
             {`SubTotal : ₦${totalCartPrice}`}
             </div>
 
-            <div className='h-[auto] w-[90px] rounded-normal flex flex-col items-center  font-dongle p-2 text-[10px] bg-slate-500 my-10' onClick={addToOrder}>
+            <div className='h-[auto] w-[90px] rounded-normal flex flex-col items-center  font-dongle p-2 text-[10px] bg-slate-500 border-slate-500 border-solid border-2 my-10 hover:bg-white' onClick={addToOrder}>
             save order
             </div>
 
@@ -253,7 +253,7 @@ export default function CartItems() {
 
         
             
-        <div className='relative'>
+        <div className='relative mt-[3rem]'>
         {cartItems}
         </div>
     </div>

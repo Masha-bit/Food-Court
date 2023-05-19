@@ -143,11 +143,11 @@ export default function page() {
                     </li>
                     <li></li>
                     <li className='h-[50px] w-[80%] my-2'>
-                        <ProfileLinkItem Icon={<MdAddShoppingCart color='black' size={30}/>}  Text={'orders'} Link={'./Profile'}/>
+                        <ProfileLinkItem Icon={<MdAddShoppingCart color='black' size={30}/>}  Text={'orders'} Link={'./Order'}/>
                     </li>
                     <li></li>
                     <li className='h-[50px] w-[80%] my-2'>
-                        <ProfileLinkItem Icon={<BsTag color='black' size={30}/>}  Text={'offers and promo'} Link={'./Profile'}/>
+                        <ProfileLinkItem Icon={<BsTag color='black' size={30}/>}  Text={'offers and promo'} Link={'./Offer'}/>
                     </li>
                     <li></li>
                     <li className='h-[50px] w-[80%] my-2'>
