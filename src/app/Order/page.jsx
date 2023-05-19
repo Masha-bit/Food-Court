@@ -33,7 +33,7 @@ useEffect(()=>{
         
         <div className='h-[auto] w-[100%] flex flex-col items-center justify-center my-[5rem] text-[#7e7e7e]'>
 
-        {orderdatabaseFromLocalStorage != ''? (
+        {order != ''? (
                 <div className='h-[120px] w-[100%] bg-slate-100 rounded-lg flex items-center text-left text-[21px]'>
                    Pending order:
                    <i className='ml-3'>
