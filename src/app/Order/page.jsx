@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav from './component/Nav'
 import Button from '../Button'
 import Image from 'next/image'
@@ -15,6 +15,7 @@ export default function page() {
         `[]`
         ):null
     })
+    
 
 
   return (

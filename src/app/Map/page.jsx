@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import SwipeAnimation from 'react-icons/app/SwipeAnimation'
 import map from '/public/asset/Map.png'
@@ -22,6 +22,7 @@ export default function page() {
       ):null
       localStorage
   })
+  
 
 
   return (
