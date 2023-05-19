@@ -36,7 +36,7 @@ const SwipeAnimation = ({ children }) => {
     };
   }, [direction]);
 
-  return <div id="swipe-container" className='h-screen w-[100vw] overflow-y-auto'>{children}</div>;
+  return ( <div id="swipe-container" className='max-h-[100%]'>{children}</div> );
 };
 
 export default SwipeAnimation;

@@ -25,7 +25,7 @@ const Checkout = () => {
 
   return (
     <SwipeAnimation>
-    <div className='h-[100vh] w-[100%] bg-[#F5F5F8] overflow-y-auto'>
+    <div className='h-screen w-screen bg-[#F5F5F8] '>
     <div className="p-2 flex flex-col items-center font-dongle">
       <Nav />
 
