@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './component/Nav'
 import Button from '../Button'
 import Image from 'next/image'
