@@ -177,13 +177,15 @@ export default function CartItems() {
     }
     
 
-    function addToOrder(){
-        useEffect(() => {
-            if(window !== 'undefined'){
+    // const [orderfn, setOrderFn] = useState(
+    //     console.log(`first`)
+    // )
+    const addToOrder=()=>{
+            if(window !== "undefined"){
             localStorage.setItem('Order', JSON.stringify([totalCartPrice]))         
         ,[]  }
-        })
-    }
+            }
+
 
  
 
