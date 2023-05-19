@@ -1,8 +1,10 @@
 import React from 'react'
 import BackArrow from './component/BackArrow'
+import SwipeAnimation from '../SwipeAnimation'
 
 export default function page() {
   return (
+    <SwipeAnimation>
     <div className='h-[100vh] w-[100vw]'>
         <div className='h-[100%] w-[100%] flex items-center p-2 flex-col relative bg-slate-100'>
             <div className='h-[70px] w-[100%] my-10 flex items-center'>
@@ -20,5 +22,6 @@ export default function page() {
 
         </div>
     </div>
+    </SwipeAnimation>
   )
 }

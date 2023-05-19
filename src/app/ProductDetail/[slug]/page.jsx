@@ -6,6 +6,8 @@ import Button from 'react-icons/app/Button';
 import foodDes from 'react-icons/app/Menu/components/foodDes';
 import Image from 'next/image';
 import Divider from '../Divider';
+import SwipeAnimation from 'react-icons/app/SwipeAnimation';
+
 
 // import cartItems from 'react-icons/app/Cart/component/cart.js';
 // import cartItems from 'react-icons/app/Cart/component/cart';
@@ -20,6 +22,7 @@ const databaseFromLocalStorage =
     `[{}]`
     ):null
 // })
+
     
     const ProductScreen = ({ addtoCart}) => {
 
@@ -36,6 +39,8 @@ const databaseFromLocalStorage =
         databaseFromLocalStorage 
         // [product]
         )
+
+    
         
         const addToCartHandler = () =>{
             // localStorage.clear("Cart")
@@ -91,12 +96,15 @@ const databaseFromLocalStorage =
 
     if(!product){
         return (
+            <SwipeAnimation>
             <div>
                 Product Not Found 
             </div>
+            </SwipeAnimation>
         )
     }
     return(
+        <SwipeAnimation>
         <div className='h-[90%] w-[100%] flex flex-col items-center p-1 font-dongle overflow-y-auto bg-gray-100'>     
         
         {/* image div  */}
@@ -163,6 +171,7 @@ const databaseFromLocalStorage =
         </div>
 
     </div>
+    </SwipeAnimation>
   );
 };
 export default ProductScreen;

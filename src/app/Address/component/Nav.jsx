@@ -9,7 +9,7 @@ export default function Nav() {
             <BackArrow Size={30} Style={{color: ''}}/>
             </span>
             <p className='font-semibold text-[18px] flex font-dongle w-[60%] justify-center'>            
-                Cart
+                Address
             </p>
             <div className='w-[20%]'>
 

@@ -4,8 +4,11 @@ import Link from 'next/link'
 import { nanoid } from 'nanoid'
 import foodDes from 'react-icons/app/Menu/components/foodDes'
 
-export default function FoodPlate({ data }) {
- 
+
+
+
+export default function FoodPlate({props}) {
+  
   const foodplates = foodDes.foodPlates.map((foodplate) =>(
     <div key={foodplate.name}  className='h-[300px] w-[450px] flex items-center '>
       <Link href={`/ProductDetail/${foodplate.slug}`}>

@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import Button from 'react-icons/app/Button'
 
 const bttn = "Login"
-const bttnLink = "./Animation"
+const bttnLink = "./Home"
 
 
 // const databaseFromLocalStorage = JSON.parse(localStorage.getItem('User Details') || 
