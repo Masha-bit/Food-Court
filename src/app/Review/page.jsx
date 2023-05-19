@@ -9,13 +9,13 @@ import Button from '../Button';
 
 export default function Review() {
     const reviewdatabaseFromLocalStorage =
-//  useEffect(()=>{
+ useEffect(()=>{
     typeof window !== undefined?
     JSON.parse(
     localStorage.getItem('Review') ||
     `[]`
     ):null
-// })
+})
 
 
   return (

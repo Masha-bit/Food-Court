@@ -8,13 +8,13 @@ import { BsCart3 } from 'react-icons/bs'
 
 export default function page() {
     const orderdatabaseFromLocalStorage =
-    //  useEffect(()=>{
+     useEffect(()=>{
         typeof window !== undefined?
         JSON.parse(
         localStorage.getItem('Order') ||
         `[]`
         ):null
-    // })
+    })
 
 
   return (

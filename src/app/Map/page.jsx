@@ -14,14 +14,14 @@ import Nav from './Nav'
 
 export default function page() {
   const addressdatabaseFromLocalStorage =
-  //  useEffect(()=>{
+   useEffect(()=>{
       typeof window !== undefined?
       JSON.parse(
       localStorage.getItem('Address') ||
       `[]`
       ):null
       localStorage
-  // })
+  })
 
 
   return (
