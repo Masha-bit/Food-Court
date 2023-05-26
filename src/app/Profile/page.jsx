@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import BackArrow from './component/BackArrow'
 import ProfileItem from './component/ProfileItem'
 import SwipeAnimation from '../SwipeAnimation'
@@ -8,6 +8,26 @@ import SwipeAnimation from '../SwipeAnimation'
 export default function Profile() {
     // const databaseFromLocalStorage = JSON.parse(localStorage.getItem('User details') || '[]')
     // console.log(databaseFromLocalStorage)
+
+    const [active, setActive] = useState(false)
+
+    const onHandleChange = ()=>{
+      setActive(!active)
+    }
+  
+    const [name, setName] = useState('Masha, Christopher')
+    
+    function text(e){
+      setName(e)
+      console.log(name)
+    }
+  
+    function handleSubmitName(){
+          if(window !== 'undefined'){
+          localStorage.setItem('User-Name', JSON.stringify([name]))         
+      ,[]  }
+    }
+  
   return (
     // <SwipeAnimation>
     <div className='h-[100vh] w-[100vw]'>
@@ -22,30 +42,44 @@ export default function Profile() {
 
             <div className='h-[30px] w-[90%] bg-transparent font-dongle flex items-center justify-between my-2'>
                 <p>Personal details</p>
-                <p>change/</p>
+                <p onClick={onHandleChange} className={active? `text-gray-500`: `text-black`}>change/</p>
             </div>
 
-            <div className='h-[200px] w-[100%] bg-white rounded-new m-4 shadow-lg flex items-center justify-around'>
-                
-                {/* profile image */}
-                <div className='h-[90px] w-[90px] bg-slate-500 rounded-full'>
+        <div className='h-[200px] w-[100%] bg-white rounded-new m-4 shadow-lg flex items-center justify-around'>
+        
+        {active? 
+        (
+        <div className='h-[90%] w-[90%] bg-transparent flex flex-col items-start font-dongle text-[20px]'>
+            <input className='m-2 outline-none border-none w-[100%]' placeholder='Masha Christopher' type='text' onChange={(e)=> text(e.target.value)}/>
+             {/* <div className='m-2'>Masha Christopher</div> */}
+ 
+             <div className='text-slate-400 text-[16px]'>
+                <input type='text' className='m-2 border-b-2' placeholder='masha@example.com'/>
+             {/* <div className='m-2 border-b-2'>masha@example.com</div> */}
+             <div className='m-2 border-b-2'>{
+                 `090 443 14428`
+                 }
+             </div>
+             <div className='m-2 border-b-2'>Lyari, Karachi</div>
+             </div>
+        </div>
+        ):
+        (
+        <div className='h-[90%] w-[90%] bg-transparent flex flex-col items-start font-dongle text-[20px]'>
+            <div className='m-2'>Masha Christopher</div>
 
-                </div>
-
-                {/* profile text */}
-                <div className='h-[90%] w-[200px] bg-transparent flex flex-col items-start font-dongle text-[20px]'>
-                    <div className='m-2'>Masha Christopher</div>
-
-                    <div className='text-slate-400 text-[16px]'>
-                    <div className='m-2 border-b-2'>masha@example.com</div>
-                    <div className='m-2 border-b-2'>{
-                        `090 443 14428`
-                        }
-                    </div>
-                    <div className='m-2 border-b-2'>Lyari, Karachi</div>
-                    </div>
-                </div>
+            <div className='text-slate-400 text-[16px]'>
+            <div className='m-2 border-b-2'>masha@example.com</div>
+            <div className='m-2 border-b-2'>{
+                `090 443 14428`
+                }
             </div>
+            <div className='m-2 border-b-2'>Lyari, Karachi</div>
+            </div>
+        </div>
+        )
+        }
+        </div>
 
             <div className='w-[100%]'>
                 <ProfileItem Text={'Orders'} Link={'./Cart'} Size={30} Style={{ color: 'black' }} />
