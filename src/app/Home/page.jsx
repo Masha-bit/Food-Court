@@ -92,7 +92,7 @@ export default function page() {
             </div>
 
             <div className='h-[100px] w-[90%] mt-8'>
-            <h1 className='w-[auto] h-[auto] text-[40px] font-dongle leading-10'  >
+            <h1 className='w-[auto] h-[auto] text-[30px] font-dongle leading-10'  >
                 Delicious
                 <br /> 
                 food for you
@@ -109,7 +109,7 @@ export default function page() {
                 
             </div>
 
-            <div className='w-[90%] mt-2 text-right text-[18px]'>
+            <div className='w-[90%] mt-2 text-right text-[11px]'>
                 see more.
             </div>
 
@@ -158,7 +158,7 @@ export default function page() {
                         <ProfileLinkItem Icon={<IoShieldHalf color='black' size={30}/>}  Text={'security'} Link={'./Profile'}/>
                     </li>
                    
-                    <li className='h-[70px] w-[100%] mt-[10rem] flex items-center font-dongle text-[19px]'>
+                    <li className='h-[70px] w-[100%] mt-[10rem] flex items-center font-dongle text-[14px]'>
                         <Link href={'./Register'} className='flex items-center'>
                         <p>Sign-out</p>
                         <div className='h-[50px] w-[50px] flex items-center justify-center'>

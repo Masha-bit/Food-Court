@@ -34,7 +34,7 @@ useEffect(()=>{
         <div className='h-[auto] w-[100%] flex flex-col items-center justify-center my-[5rem] text-[#7e7e7e]'>
 
         {order != ''? (
-                <div className='h-[120px] w-[100%] bg-slate-100 rounded-lg flex items-center text-left text-[21px]'>
+                <div className='h-[120px] w-[100%] bg-slate-100 rounded-lg flex items-center text-left text-[12px]'>
                    Pending order:
                    <i className='ml-3'>
                     ₦ {order} 
@@ -44,7 +44,7 @@ useEffect(()=>{
                 <div className='h-[auto] w-[100%] flex flex-col items-center'>
                     <BsCart3 size={200} style={{color:'#7e7e7e'}}/>
 
-                <p className='my-6 text-[30px] font-bold text-black'>No Orders yet</p>
+                <p className='my-6 text-[20px] font-bold text-black'>No Orders yet</p>
                 <p className='w-[46%] text-center'>Hit the orange button down
                 below to Create an order!</p>
 

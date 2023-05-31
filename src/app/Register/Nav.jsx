@@ -14,12 +14,12 @@ export default function Nav() {
                 </div>
                 <div className='absolute bottom-0 left-0 h-[70px] w-[100%] rounded-b-new flex flex-row justify-center items-center'>
                     <Link href={"./Register/Login"} className='h-[100%] w-[50%]'>
-                    <aside className='w-[100%] h-[100%] rounded-bl-new text-center flex items-center justify-center hover:bg-slate-100 transition-all active:text-red-400 text-[30px]'>
+                    <aside className='w-[100%] h-[100%] rounded-bl-new text-center flex items-center justify-center hover:bg-slate-100 transition-all active:text-red-400 text-[20px]'>
                         Login
                     </aside>
                     </Link>
                     <Link href={"./Register/Signup"} className='h-[100%] w-[50%]'>
-                    <aside className='w-[100%] h-[100%] rounded-br-new text-center flex items-center justify-center hover:bg-slate-100 transition-all text-[30px]'>
+                    <aside className='w-[100%] h-[100%] rounded-br-new text-center flex items-center justify-center hover:bg-slate-100 transition-all text-[20px]'>
                         Sign-up
                     </aside>
                     </Link>

@@ -5,6 +5,7 @@ import Nav from './component/Nav';
 import Image from 'next/image'
 import reviewpng from '/public/asset/review.png'
 import Button from '../Button';
+import CurrentTime from './component/CurrentTime';
 // import SwipeAnimation from '../SwipeAnimation';
 
 export default function Review() {

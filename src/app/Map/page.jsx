@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import SwipeAnimation from 'react-icons/app/SwipeAnimation'
 import map from '/public/asset/Map.png'
-import user from '/public/asset/user.png'
+import userImg from '/public/asset/user.png'
 import Button from '../Button'
 
 import { FiPhoneCall } from 'react-icons/fi'
@@ -16,6 +16,7 @@ export default function page() {
 
   
 const [address, setAddress] = useState([])
+const [user, setUser]= useState([])
 
 useEffect(()=>{
   const addressdatabaseFromLocalStorage =
@@ -27,8 +28,18 @@ useEffect(()=>{
     :null
     console.log(addressdatabaseFromLocalStorage)
 
+    const userdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('User') ||
+    `[{}]`
+    )
+    :null
+    console.log(userdatabaseFromLocalStorage)
+
 
     addressdatabaseFromLocalStorage? setAddress(addressdatabaseFromLocalStorage): null
+    userdatabaseFromLocalStorage? setUser(userdatabaseFromLocalStorage): null
 },[])
 
 
@@ -82,15 +93,15 @@ useEffect(()=>{
                
               </div>
 
-              <div className='h-[100px] w-[90%] bg-slate-200 flex flex-row items-center my-2 rounded-md p-1'>
+              <div className='h-[100px] w-[90%] bg-slate-200 flex flex-row items-center justify-around my-2 rounded-md p-1'>
                 <div className='h-[70px] w-[70px] rounded-full bg-[#fcc73f] mx-2 flex items-center justify-center'>
-                <Image src={user} alt='user'/> 
+                <Image src={userImg} alt='user'/> 
                 </div>
                       
         
 
                 <p className='w-[180px] mx-2'>
-                  Masha Christopher
+                  {user}
                 </p>
 
                 <div className='h-[70px] w-[70px] rounded-full bg-black mx-2 flex items-center justify-center'>

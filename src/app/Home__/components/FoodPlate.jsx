@@ -23,7 +23,7 @@ export default function FoodPlate({props}) {
                 
                 <p className=' text-2xl leading-[22px] font-semibold w-[90%] h-[50px] flex items-center justify-center text-center'>{foodplate.name}</p>
 
-                <p className='text-[20px] text-[#FFC83A] mt-2'><span className='text-[15px] mx-3 text-black'>₦</span>{foodplate.price}</p>
+                <p className='text-[16px] text-[#FFC83A] mt-2'><span className='text-[11px] mx-3 text-black'>₦</span>{foodplate.price}</p>
             </div>
 
           

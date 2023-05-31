@@ -121,10 +121,10 @@ const databaseFromLocalStorage =
         </div>
 
         {/* food name and price */}
-        <div className='h-[100px] w-auto max-w-[400px] flex flex-col items-center justify-center text-[25px]'>
+        <div className='h-[100px] w-auto max-w-[400px] flex flex-col items-center justify-center text-[20px]'>
             <h1>{product.name}</h1>
-            <p className="text-[20px] text-[#FFC83A]">
-              <span className="text-[15px] mx-2 text-black">₦</span>
+            <p className="text-[16px] text-[#FFC83A]">
+              <span className="text-[11px] mx-2 text-black">₦</span>
               {product.price}
             </p>
         </div>
@@ -155,11 +155,11 @@ const databaseFromLocalStorage =
         {/* delivery information */}
         <div className='my-4'>
             <p>
-                <h1 className='text-[20px]'>Delivery info</h1>
+                <h1 className='text-[16px]'>Delivery info</h1>
                 Delivered between monday aug and thursday 20 from 8pm to 91:32 pm
             </p>
                 <p className='mt-3'>
-                <h1 className='text-[20px]'>Return policy</h1>
+                <h1 className='text-[16px]'>Return policy</h1>
                 All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.
             </p>
         </div>

@@ -18,16 +18,25 @@ const Address = () => {
   }
 
   const [address, setAddress] = useState('Lyari, karachi')
+  const [user, setUser] = useState('Muzzammil Khatri')
   
-  function text(e){
+  function atext(e){
     setAddress(e)
     console.log(address)
+  }
+  
+  function utext(e){
+    setUser(e)
+    console.log(user)
   }
 
   function handleSubmitAddress(){
         if(window !== 'undefined'){
         localStorage.setItem('Address', JSON.stringify([address]))         
-    ,[]  }
+    ,[] &&
+    localStorage.setItem('User', JSON.stringify([user]))         
+    ,[]  
+  } 
   }
 
 
@@ -50,9 +59,9 @@ const Address = () => {
 
         {active? (
           <div className='h-[auto] w-[100%] flex flex-col my-3 p-8 text-[20px] rounded-new bg-white'>
-              <input type="text" placeholder='Muzzammil Khatri' className='outline-none border-none' />
+              <input type="text" onChange={(e)=> utext(e.target.value)} placeholder='Muzzammil Khatri' className='outline-none border-none' />
               <Divider/>
-              <input type="text" onChange={(e)=> text(e.target.value)} placeholder='Lyari, karachi' className='outline-none border-none' />
+              <input type="text" onChange={(e)=> atext(e.target.value)} placeholder='Lyari, karachi' className='outline-none border-none' />
                <Divider/>
                <input type="text" placeholder='+92 317 2839599' className='outline-none border-none' />
           </div>

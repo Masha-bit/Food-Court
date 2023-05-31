@@ -169,6 +169,7 @@ export default function CartItems() {
         console.log(remainingCart)
         window.alert(`${name} is being removed from cart`)      
         setCart(remainingCart);
+        
         typeof window !== "undefined"?
             JSON.
             parse(
