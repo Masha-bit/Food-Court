@@ -49,8 +49,8 @@ const Search = () => {
     >
       
       <Link href={`/ProductDetail/${foodplate.slug}`}>
-        <div className="bg-white h-[250px] w-[180px] mx-6 flex flex-col items-center rounded-new font-dongle ">
-          <div className="relative h-[140px] w-[140px] bg-gray-200 rounded-full -top-10 flex items-center justify-center">
+        <div className="bg-white h-[170px] w-[160px] mx-6 flex flex-col items-center rounded-new font-dongle ">
+          <div className="relative h-[120px] w-[120px] bg-gray-200 rounded-full -top-10 flex items-center justify-center">
             <Image
               src={foodplate.url}
               alt="african-national-food"
@@ -60,12 +60,12 @@ const Search = () => {
           </div>
 
           <div className="flex flex-col items-center justify-around h-[100px] w-[90%] -top-5 relative ">
-            <p className=" text-2xl leading-[22px] font-semibold w-[90%] h-[50px] flex items-center justify-center text-center">
+            <p className=" text-lg leading-[22px] font-bold w-[90%] h-[50px] flex items-center justify-center text-center">
               {foodplate.name}
             </p>
 
-            <p className="text-[20px] text-[#FFC83A]">
-              <span className="text-[15px] mx-2 text-black">₦</span>
+            <p className="text-[15px] text-[#FFC83A]">
+              <span className="text-[11px] mx-2 text-black">₦</span>
               {foodplate.price}
             </p>
           </div>
@@ -77,7 +77,7 @@ const Search = () => {
   return (
     <div className="h-[100vh]">
       <div className="h-[20%] w-[100%] flex items-center justify-center">
-        <div className="h-[70px] w-[100%] max-w-[400px] bg-white rounded-new flex flex-row items-center px-7 font-dongle text-[20px] mt-10">
+        <div className="h-[70px] w-[100%] max-w-[400px] bg-white rounded-new flex flex-row items-center px-7 font-dongle text-[15px] mt-10">
           <span className="w-8 h-7">
             <BackArrow Size={30} Style={{ color: 'gray' }} />
           </span>
@@ -94,7 +94,7 @@ const Search = () => {
 
       <div className="bg-gray-300 h-[80%] w-[100%] rounded-tr-new rounded-tl-new flex flex-col items-center">
         {searchInput.length > 1 ? (
-          <h1 className="mt-4 font-dongle text-[25px]">
+          <h1 className="mt-4 font-dongle text-[18px]">
             {/* tenary operator to check against length of matching items */}
             {filteredResults.length == 1
               ? `Found ${filteredResults.length} result`
@@ -114,17 +114,17 @@ const Search = () => {
             filteredResults.length != 0 ? (
               foodplates
             ) : (
-              <div className="my-[10rem] text-[20px] font-dongle text-gray-400 w-[50%] text-center">
+              <div className="my-[10rem] text-[15px] font-dongle text-gray-400 w-[50%] text-center">
                 <div>
                   <FiSearch size={150} style={{ color: 'gray' }}/>
                 </div>
-                <p className='font-dongle text-[25px] text-black my-4
+                <p className='font-dongle text-[20px] text-black my-4
                 '>Item not found</p>
                 Oops we dont have that on our menu now
               </div>
             )
           ) : (
-            <div className="my-[10rem] text-[25px] font-dongle text-gray-400 w-[50%] text-center ">
+            <div className="my-[10rem] text-[20px] font-dongle text-gray-400 w-[50%] text-center ">
               Find Your Favorite food here
             </div>
           )}

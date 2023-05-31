@@ -97,15 +97,12 @@ const databaseFromLocalStorage =
 
     if(!product){
         return (
-            <SwipeAnimation>
             <div>
                 Product Not Found 
             </div>
-            </SwipeAnimation>
         )
     }
     return(
-        <SwipeAnimation>
         <div className='h-[90%] w-[100%] flex flex-col items-center p-1 font-dongle overflow-y-auto bg-gray-100'>     
         
         {/* image div  */}
@@ -172,7 +169,6 @@ const databaseFromLocalStorage =
         </div>
 
     </div>
-    </SwipeAnimation>
   );
 };
 export default ProductScreen;
