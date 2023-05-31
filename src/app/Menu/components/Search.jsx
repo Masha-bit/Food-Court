@@ -44,7 +44,7 @@ const Search = () => {
   const foodplates = filteredResults.map((foodplate) => (
     <div
       key={foodplate.name}
-      className="h-[340px] w-[180px] flex items-center justify-center"
+      className="h-[200px] w-[180px] flex items-center justify-center m-3"
       onClick={() => handleProductClick(foodplate.description)}
     >
       
