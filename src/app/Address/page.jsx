@@ -67,8 +67,8 @@ const Address = () => {
     typeof window !== "undefined"?
     JSON.parse(
     localStorage.getItem('User') ||
-    `[{}]`
-    )
+    `"Muzzammil Khatri"`
+    ) || 'address'
     :null
     console.log(userdatabaseFromLocalStorage)
 
@@ -76,7 +76,7 @@ const Address = () => {
     typeof window !== "undefined"?
     JSON.parse(
     localStorage.getItem('Address') ||
-    `[{}]`
+    `"Lyari, karachi"`
     )
     :null
     const [name, setName] = useState(userdatabaseFromLocalStorage)
