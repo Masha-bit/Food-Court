@@ -44,13 +44,13 @@ const Search = () => {
   const foodplates = filteredResults.map((foodplate) => (
     <div
       key={foodplate.name}
-      className="h-[200px] w-[180px] flex items-center justify-center m-3 mt-7"
+      className="h-[200px] w-[180px] flex items-center justify-center m-1 mt-5"
       onClick={() => handleProductClick(foodplate.description)}
     >
       
       <Link href={`/ProductDetail/${foodplate.slug}`}>
-        <div className="bg-white h-[170px] w-[160px] mx-6 flex flex-col items-center rounded-new font-dongle relative ">
-          <div className="relative h-[120px] w-[120px] bg-gray-200 rounded-full -top-10 flex items-center justify-center">
+        <div className="bg-white h-[150px] w-[140px] mx-6 flex flex-col items-center rounded-new font-dongle relative ">
+          <div className="relative h-[100px] w-[100px] bg-gray-200 rounded-full -top-10 flex items-center justify-center">
             <Image
               src={foodplate.url}
               alt="african-national-food"
@@ -59,7 +59,7 @@ const Search = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center justify-around h-[100px] w-[90%] absolute top-[4.55rem]">
+          <div className="flex flex-col items-center justify-around h-[70px] w-[90%] absolute top-[4.50rem]">
             <p className=" text-lg leading-[22px] font-bold w-[90%] h-[50px] flex items-center justify-center text-center">
               {foodplate.name}
             </p>
