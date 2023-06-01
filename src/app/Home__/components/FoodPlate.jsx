@@ -36,7 +36,7 @@ export default function FoodPlate({props}) {
 
   
   return (
-    <div className=' h-[100%] w-[auto] overflow-y-auto flex flex-row items-center justify-between'>
+    <div className=' h-[100%] w-[auto] overflow-y-auto flex flex-row items-center justify-between scrollbar-hide'>
         {foodplates}
     </div>
   )

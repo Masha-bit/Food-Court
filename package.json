@@ -20,6 +20,7 @@
     "react-referer": "^1.0.1",
     "react-router-dom": "^6.11.2",
     "react-test-renderer": "^18.2.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "3.3.2"
   }
 }

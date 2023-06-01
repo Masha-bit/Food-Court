@@ -24,7 +24,7 @@ const Cart = () => {
     
   return (
     // <SwipeAnimation>
-    <div className="h-[100vh] p-2 flex flex-col items-center bg-slate-50">
+    <div className="h-[auto] p-2 flex flex-col items-center bg-slate-50">
       <Nav />
       <div className="h-[70px] w-[70%]  my-4 flex items-center justify-center">
         <SwipeInstruction />
@@ -34,7 +34,7 @@ const Cart = () => {
         <CartItems/>
       </div>
 
-      <div className='absolute bottom-0 '>
+      <div className='mt-3 absolute bottom-0'>
        <Button buttonLink='./Address' buttonText='Start Ordering'/>
       </div>
     </div>

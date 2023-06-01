@@ -31,13 +31,59 @@ const Address = () => {
   }
 
   function handleSubmitAddress(){
+    onHandleChange()
         if(window !== 'undefined'){
         localStorage.setItem('Address', JSON.stringify([address]))         
     ,[] &&
     localStorage.setItem('User', JSON.stringify([user]))         
     ,[]  
-  } 
   }
+  
+    const userdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('User') ||
+    `[{}]`
+    )
+    :null
+    console.log(userdatabaseFromLocalStorage)
+  
+    const addressdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('Address') ||
+    `[{}]`
+    )
+    :null
+    
+    userdatabaseFromLocalStorage != []? setName(userdatabaseFromLocalStorage): null
+    addressdatabaseFromLocalStorage != []? setLocation(addressdatabaseFromLocalStorage): null
+    console.log(user)
+  }
+
+  
+    
+    const userdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('User') ||
+    `[{}]`
+    )
+    :null
+    console.log(userdatabaseFromLocalStorage)
+
+    const addressdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('Address') ||
+    `[{}]`
+    )
+    :null
+    const [name, setName] = useState(userdatabaseFromLocalStorage)
+    const [location, setLocation] = useState(addressdatabaseFromLocalStorage)
+
+  
+
 
 
   return (
@@ -52,25 +98,25 @@ const Address = () => {
 
       <div className="h-[70px] w-[80%]  my-4 flex items-center justify-between font-dongle">
         <p>Address details</p>
-        <p onClick={onHandleChange} className={active? 'text-slate-500': ''}>/change</p>
+        <p onClick={handleSubmitAddress} className={active? 'text-slate-500': ''}>/change</p>
       </div>
 
       <div className='h-auto w-[100%]'>
 
         {active? (
           <div className='h-[auto] w-[100%] flex flex-col my-3 p-8 text-[20px] rounded-new bg-white'>
-              <input type="text" onChange={(e)=> utext(e.target.value)} placeholder='Muzzammil Khatri' className='outline-none border-none' />
+              <input type="text" onChange={(e)=> utext(e.target.value)} placeholder={name} className='outline-none border-none' />
               <Divider/>
-              <input type="text" onChange={(e)=> atext(e.target.value)} placeholder='Lyari, karachi' className='outline-none border-none' />
+              <input type="text" onChange={(e)=> atext(e.target.value)} placeholder={location} className='outline-none border-none' />
                <Divider/>
                <input type="text" placeholder='+92 317 2839599' className='outline-none border-none' />
           </div>
         ):
         (
           <div className='h-[auto] w-[100%] flex flex-col my-3 p-8 text-[20px] rounded-new bg-white'>
-              <p>Muzzammil Khatri</p>
+              <p>{name}</p>
               <Divider/>
-              <p>Lyari, karachi</p>
+              <p>{location}</p>
                <Divider/>
               <p>+92 317 2839599</p>
           </div>
@@ -80,7 +126,7 @@ const Address = () => {
         {/* <CartItems/> */}
       </div>
 
-      <div className='absolute bottom-0 ' onClick={handleSubmitAddress}>
+      <div className='absolute bottom-0 '>
        <Button buttonLink='./Checkout' buttonText='Confirm Address'/>
       </div>
     </div>

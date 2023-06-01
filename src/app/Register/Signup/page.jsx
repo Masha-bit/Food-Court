@@ -132,7 +132,7 @@ const [users, setUsers] = useState({
   
 
   return (
-    <form className='mt-[5rem] mx-auto h-[50%] w-[80%] font-dongle overflow-y-auto '>
+    <form className='mt-[5rem] mx-auto h-[50%] w-[80%] font-dongle overflow-y-auto scrollbar-hide '>
       <div>
         <label htmlFor="fname" className='text-[16px] text-gray-500'>First Name</label>
         <input type="text" name="fname" id="fname" className='block w-[100%] h-[40px] border-b-2 bg-transparent border-black px-2 outline-none'  onChange={handleNameChange} required />

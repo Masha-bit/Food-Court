@@ -44,22 +44,22 @@ const Search = () => {
   const foodplates = filteredResults.map((foodplate) => (
     <div
       key={foodplate.name}
-      className="h-[200px] w-[180px] flex items-center justify-center m-3"
+      className="h-[200px] w-[180px] flex items-center justify-center m-3 mt-7"
       onClick={() => handleProductClick(foodplate.description)}
     >
       
       <Link href={`/ProductDetail/${foodplate.slug}`}>
-        <div className="bg-white h-[170px] w-[160px] mx-6 flex flex-col items-center rounded-new font-dongle ">
+        <div className="bg-white h-[170px] w-[160px] mx-6 flex flex-col items-center rounded-new font-dongle relative ">
           <div className="relative h-[120px] w-[120px] bg-gray-200 rounded-full -top-10 flex items-center justify-center">
             <Image
               src={foodplate.url}
               alt="african-national-food"
-              height={240}
-              width={210}
+              // height={200}
+              // width={200}
             />
           </div>
 
-          <div className="flex flex-col items-center justify-around h-[100px] w-[90%] -top-5 relative ">
+          <div className="flex flex-col items-center justify-around h-[100px] w-[90%] absolute top-[4.55rem]">
             <p className=" text-lg leading-[22px] font-bold w-[90%] h-[50px] flex items-center justify-center text-center">
               {foodplate.name}
             </p>
@@ -105,7 +105,7 @@ const Search = () => {
         ) : null}
 
         <div
-          className="overflow-y-auto overflow-x-hidden w-[100%] h-[100%]  flex flex-row justify-around flex-wrap"
+          className="overflow-y-auto overflow-x-hidden w-[100%] h-[auto] flex flex-row justify-around flex-wrap mt-4 scrollbar-hide"
           onClick={() => handleProductClick(foodplates.description)}
         >
           {/* created a tenarny condition statement to display btw "find your fav food div" and " foodplates array for the filetered food items"  */}

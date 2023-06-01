@@ -216,7 +216,7 @@ export default function CartItems() {
                   </div>
           </div>
       </div>
-      <div className='w-[150px] h-[100px] flex items-center justify-around absolute top-0 right-0'>
+      <div className='w-[150px] h-[100px] flex items-center justify-around absolute top-4 right-0'>
           <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'
             onClick={() => removeCartItemHandler(cartItem.name)}
           ><MdOutlineDelete size={30}/></div>
@@ -243,7 +243,7 @@ export default function CartItems() {
 
 
   return (
-    <div className='h-[700px] w-[100vw] flex flex-col relative'>
+    <div className='h-[auto] w-[100vw] flex flex-col relative'>
 
         <div className='h-[80px] w-[100%] rounded-normal flex flex-row items-center justify-around  font-dongle p-2 absolute top-0 text-[25px]'>
             <div>
