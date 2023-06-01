@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Nav from './Nav'
 import Button from './Button'
 import Image from 'next/image'
-import done from 'public/asset/well-done.png'
+import done from 'public/asset/98807-check-right-tick.gif'
 
 export default function page() {
 
@@ -23,7 +23,7 @@ export default function page() {
 
 
   return (
-    <div className='bg-[#FBFBF3] h-[100vh] w-[100vw] p-3 relative font-dongle flex flex-col items-center'>
+    <div className='bg-[#ffffff] h-[100vh] w-[100vw] p-3 relative font-dongle flex flex-col items-center'>
         
             <Nav/>
         
@@ -33,7 +33,7 @@ export default function page() {
         </div>
 
         <div className='h-[auto] w-[100%] flex items-center justify-center'>
-        <Image src={done} alt='weldone.png' height={650}/>          
+        <Image src={done} alt='weldone.gif' height={650}/>          
         </div>
 
         
@@ -44,7 +44,7 @@ export default function page() {
             </p>
 
             <div className='w-[80%] h-[auto] my-2'>
-                <input type="text" name="" id="" style={{height: '100px', width:'100%', outline: 'none', border: 'none', }} placeholder='review' className='rounded-normal p-4 font-dongle text-[18px] my-1' onChange={(e)=> text(e.target.value)}/>
+                <input type="text" name="" id="" style={{height: '70px', width:'100%', outline: 'none', border: 'none', }} placeholder='write a review' className='rounded-normal p-4 font-dongle text-[18px] my-1  bg-slate-100' onChange={(e)=> text(e.target.value)}/>
             </div>
 
         
