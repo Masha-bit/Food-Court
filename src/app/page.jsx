@@ -34,22 +34,22 @@ export default function Splash() {
       </div> */}
 
       <div id='mobile' className='laptop:hidden h-[100%] w-[100%] bg-[#00000000] flex flex-col p-2 font-dongle'>
-        <div className='w-[100%] mt-8'>
+        <div className='w-[100%] mt-6'>
         <Image src={logo} alt='aptech_logo' className='relative ml-[8%]'/>
         </div>
-        <h1 className='text-white text-[60px] w-[90%] max-w-[400px] ml-[8%] mt-9 leading-[65px] '>Food for <br /> Everyone</h1>
-        <div id='img_block' className='relative flex flex-row items-center justify-center h-[500px] w-auto mt-[2rem] my-auto'>
+        <h1 className='text-white text-[45px] w-[90%] max-w-[400px] ml-[8%] mt-7 leading-[65px] '>Food for <br /> Everyone</h1>
+        <div id='img_block' className='relative flex flex-row items-center justify-center h-[500px] w-auto mt-[1.15rem] my-auto'>
           <aside className='flex flex-col items-center justify-center'>
             <div className='h-[50%] w-[auto]'>
-              <Image src={pizza} alt='pizza.png' height={150} className=''/>
+              <Image src={pizza} alt='pizza.png' height={130} className=''/>
             </div>
             <div className='h-[50%] w-[auto]'>
-              <Image src={burger} alt='burger.png' height={150} className=''/>
+              <Image src={burger} alt='burger.png' height={130} className=''/>
             </div>
           </aside>
 
           <aside className='h-[auto] w-[auto]'>
-            <Image src={boy} alt='boy.png' height={650}/>
+            <Image src={boy} alt='boy.png' height={600}/>
           </aside>
           <div className='absolute -bottom-3 h-[150px] w-[100%] lin-grad'>
           </div>
