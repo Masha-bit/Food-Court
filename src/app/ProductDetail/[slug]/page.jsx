@@ -127,7 +127,7 @@ const databaseFromLocalStorage =
         </div>
 
         {/* food description  */}
-        <div className='my-4'>
+        <div className='my-4 p-3'>
             <p>
                 {product.description}
             </p>
@@ -150,7 +150,7 @@ const databaseFromLocalStorage =
         <Divider/>
 
         {/* delivery information */}
-        <div className='my-4'>
+        <div className='my-4 p-3'>
             <p>
                 <h1 className='text-[16px]'>Delivery info</h1>
                 Delivered between monday aug and thursday 20 from 8pm to 91:32 pm
