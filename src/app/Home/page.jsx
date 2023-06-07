@@ -67,12 +67,12 @@ export default function page() {
     }
 
     const cartdatabaseFromLocalStorage =
-    typeof window != undefined?
+    typeof window !== "undefined"?
     JSON.parse(
     localStorage.getItem('Cart') ||
     `[{}]`
     )
-    :null
+    : []
     console.log(cartdatabaseFromLocalStorage)
 
     const cartLength = cartdatabaseFromLocalStorage.length - 1
