@@ -161,6 +161,9 @@ export default function CartItems() {
             }
     } 
     
+
+    // const [ orderLength ] = useReco
+    // console.log(cart.length)
     
 
     function removeCartItemHandler(name){

@@ -65,6 +65,19 @@ export default function page() {
         tl.reversed(tl.reverse());
         setClickState(false);
     }
+
+    const cartdatabaseFromLocalStorage =
+    typeof window !== "undefined"?
+    JSON.parse(
+    localStorage.getItem('Cart') ||
+    `[{}]`
+    )
+    :null
+    console.log(cartdatabaseFromLocalStorage)
+
+    const cartLength = cartdatabaseFromLocalStorage.length - 1
+
+    console.log(cartLength)
     
   
    
@@ -84,9 +97,19 @@ export default function page() {
                     
                     {/* {props.Hamburger} */}
                 </div>
-                <div>
+                <div className='relative'>
                     <Link href={'./Cart'}>
                     <CgShoppingCart size={30} style={{color: 'gray'}}/>
+
+                    {
+                        cartLength != 0?
+                        (
+                            <div className=' font-dongle  h-[20px] w-[20px] z-10 bg-[#FFC83A] rounded-full absolute -top-2 -right-2 flex justify-center items-center'>{cartLength}</div>
+                        ):
+                        null
+                    }
+
+                    
                     </Link>
                 </div>
             </div>
