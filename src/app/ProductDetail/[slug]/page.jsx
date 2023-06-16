@@ -152,11 +152,11 @@ const databaseFromLocalStorage =
         {/* delivery information */}
         <div className='my-4 p-3'>
             <p>
-                <h1 className='text-[16px]'>Delivery info</h1>
+                <h1 className='text-[14px]'>Delivery info</h1>
                 Delivered between monday aug and thursday 20 from 8pm to 91:32 pm
             </p>
                 <p className='mt-3'>
-                <h1 className='text-[16px]'>Return policy</h1>
+                <h1 className='text-[14px]'>Return policy</h1>
                 All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.
             </p>
         </div>

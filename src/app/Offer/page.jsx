@@ -16,7 +16,7 @@ export default function page() {
             </div>
 
             <div className='h-[600px] w-[90%] my-5 flex items-center justify-center flex-col'>
-                <p className='font-dongle text-[23px]'>ohh snap! No Offers yet</p>
+                <p className='font-dongle text-[23px]'>ohh snap! no Offers yet</p>
                 <p className='font-dongle text-[15px] text-center text-gray-400'>Apptech doesn't have any offers yet, please check again</p>
             </div>
 

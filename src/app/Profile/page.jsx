@@ -21,24 +21,32 @@ const [address, setAddress] = useState()
 useEffect(()=>{
     const userdatabaseFromLocalStorage =
     typeof window !== "undefined"?
+    localStorage.getItem('User')?
     JSON.parse(
-    localStorage.getItem('User') ||
-    `[{}]`
+    localStorage.getItem('User')
+    // ||
+    // `[{}]`
     )
     :null
+    :null
+    
     console.log(userdatabaseFromLocalStorage)
+    // console.log(typeof(userdatabaseFromLocalStorage))
 
     const addressdatabaseFromLocalStorage =
     typeof window !== "undefined"?
     JSON.parse(
-    localStorage.getItem('Address') ||
-    `[{}]`
+    localStorage.getItem('Address')
+    //  ||
+    // `[{}]`
     )
     :null
     
-    userdatabaseFromLocalStorage != []? setUser(userdatabaseFromLocalStorage): null
-    addressdatabaseFromLocalStorage != []? setAddress(addressdatabaseFromLocalStorage): null
+    userdatabaseFromLocalStorage === null ?  setUser('Masha, Christopher') : setUser(userdatabaseFromLocalStorage)
+    
+    addressdatabaseFromLocalStorage == {} ? setAddress('Lyari, Karachi') : setAddress(addressdatabaseFromLocalStorage)
     console.log(user)
+
 },[])
   
     const [name, setName] = useState(user)
@@ -86,7 +94,7 @@ useEffect(()=>{
         {active? 
         (
         <div className='h-[90%] w-[60%] bg-transparent flex flex-col items-start font-dongle text-[20px]'>
-            <input className='m-2 outline-none border-none w-[100%]' placeholder={name != undefined ? name :'Masha Christopher'} type='text' onChange={(e)=> text(e.target.value)}/>
+            <input className='m-2 outline-none border-none w-[100%]' placeholder={user == null ? 'Masha Christopher' : user} type='text' onChange={(e)=> text(e.target.value)}/>
              {/* <div className='m-2'>Masha Christopher</div> */}
  
              <div className='text-slate-400 text-[16px]'>
@@ -102,7 +110,7 @@ useEffect(()=>{
         ):
         (
         <div className='h-[90%] w-[60%] bg-transparent flex flex-col items-start font-dongle text-[20px]'>
-            <div className='m-2'>{name != undefined ? name :'Masha Christopher'}</div>
+            <div className='m-2'>{name == undefined ? user : name}</div>
 
             <div className='text-slate-400 text-[16px]'>
             <div className='m-2 border-b-2'>masha@example.com</div>
@@ -118,13 +126,13 @@ useEffect(()=>{
         </div>
 
             <div className='w-[100%]'>
-                <ProfileItem Text={'Orders'} Link={'./Cart'} Size={30} Style={{ color: 'black' }} />
+                <ProfileItem Text={'Orders'} Link={'./Order'} Size={30} Style={{ color: 'black' }} />
 
                 <ProfileItem Text={'Pending reviews'} Link={'./Review'} Size={30} Style={{ color: 'black' }} />
 
-                <ProfileItem Text={'Faq'} Link={'./Cart'} Size={30} Style={{ color: 'black' }} />
+                <ProfileItem Text={'Promos'} Link={'./Offer'} Size={30} Style={{ color: 'black' }} />
 
-                <ProfileItem Text={'Help'} Link={'./Cart'} Size={30} Style={{ color: 'black' }} />
+                <ProfileItem Text={'Help'} Link={'./Help'} Size={30} Style={{ color: 'black' }} />
             </div>
         </div>
     </div>

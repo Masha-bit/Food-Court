@@ -10,6 +10,7 @@ import { FiPhoneCall } from 'react-icons/fi'
 import { GrLocation } from 'react-icons/gr'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import Nav from './Nav'
+import Link from 'next/link'
 
 
 export default function page() {
@@ -40,7 +41,23 @@ useEffect(()=>{
 
     addressdatabaseFromLocalStorage? setAddress(addressdatabaseFromLocalStorage): null
     userdatabaseFromLocalStorage? setUser(userdatabaseFromLocalStorage): null
+
+
 },[])
+
+  
+const completeOrder = () =>{
+
+    typeof window !== "undefined"?
+        localStorage.removeItem('Cart') ||
+        window.alert('order has been successfully made!')
+        :null
+        
+        console.log('deleted')
+    }
+
+
+
 
 
   
@@ -62,7 +79,7 @@ useEffect(()=>{
                   <AiOutlineClockCircle/>
                   </div>
 
-                  <div className='h-[80px] border-[0.5px] border-[#ffd15e] '>
+                  <div className='h-[60px] border-[0.5px] border-[#ffd15e] '>
 
                   </div>
 
@@ -79,7 +96,7 @@ useEffect(()=>{
                   <p className='text-[18px] w-[100%]'>03:00PM (Max 20 min)</p>
                   </div>
 
-                  <div className='h-[80px]'>
+                  <div className='h-[60px]'>
 
                   </div>
 
@@ -93,7 +110,7 @@ useEffect(()=>{
                
               </div>
 
-              <div className='h-[100px] w-[90%] bg-slate-200 flex flex-row items-center justify-around my-2 rounded-md p-1'>
+              <div className='h-[80px] w-[90%] bg-slate-200 flex flex-row items-center justify-around my-2 rounded-md p-1'>
                 <div className='h-[70px] w-[70px] rounded-full bg-[#fcc73f] mx-2 flex items-center justify-center'>
                 <Image src={userImg} alt='user'/> 
                 </div>
@@ -113,7 +130,19 @@ useEffect(()=>{
 
 
               <div className=' absolute bottom-0'>
+
+                <Link href={'./Complete'}>
+                <div className='max-h-[70px] w-[250px] max-w-[314px] bg-white border-[#e7ad19] border-2 hover:bg-[#e7ad19] my-4 mx-auto rounded-full p-5 flex items-center text-[#FFC83A] hover:text-black text-[17px] transition-all' onClick={completeOrder}>
+                    <div className='my-0 mx-auto font-dongle'>
+                        Check Details
+                    </div>            
+                </div>
+                </Link>
+                {/* <span className='bg-orange-700' onClick={completeOrder}>
                 <Button buttonText={'Check Details'} buttonLink={'./Complete'}/>
+                </span> */}
+                
+
               </div>
             </div>
             </div>

@@ -68,7 +68,7 @@ const Address = () => {
     JSON.parse(
     localStorage.getItem('User') ||
     `"Muzzammil Khatri"`
-    ) || 'address'
+    ) || 'Muzzammil Khatri'
     :null
     console.log(userdatabaseFromLocalStorage)
 
