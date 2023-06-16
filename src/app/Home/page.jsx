@@ -115,7 +115,7 @@ export default function page() {
             </div>
 
             <div className='h-[100px] w-[90%] mt-8'>
-            <h1 className='w-[auto] h-[auto] text-[30px] font-dongle leading-10 text-bold'  >
+            <h1 className='w-[auto] h-[auto] text-[35px] font-dongle leading-10 font-black'  >
                 Delicious
                 <br /> 
                 food for you

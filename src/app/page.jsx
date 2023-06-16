@@ -37,7 +37,7 @@ export default function Splash() {
         <div className='w-[100%] mt-6'>
         <Image src={logo} alt='aptech_logo' className='relative ml-[8%]'/>
         </div>
-        <h1 className='text-white text-[45px] w-[90%] max-w-[400px] ml-[8%] mt-7 leading-[65px] '>Food for <br /> Everyone</h1>
+        <h1 className='text-white font-[900] text-[53px] w-[90%] max-w-[400px] ml-[8%] mt-7 leading-[65px] '>Food for <br /> Everyone</h1>
         <div id='img_block' className='relative flex flex-row items-center justify-center h-[500px] w-auto mt-[1.15rem] my-auto'>
           <aside className='flex flex-col items-center justify-center'>
             <div className='h-[50%] w-[auto]'>
