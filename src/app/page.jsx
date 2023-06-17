@@ -24,7 +24,7 @@ export default function Splash() {
           <BsPhone style={{color: 'gray'}} size={300}/>
         </div> */}
         <h1 className='w-[100%] mx-auto text-[25px] text-slate-400'>Oops Device compatibility error</h1>
-        <p className=' w-[100%] text-[14px] text-slate-400'>We noticed you opened this on a desktop.This application was designed to give maximum user experience to mobile users. Try opening this site on a mobile device</p>
+        <p className=' w-[100%] text-[14px] text-slate-400'>We noticed you opened this on a desktop.This application was designed to give maximum user experience to mobile users. Try opening this site on a mobile device or Preveiwing the site by inspecting on your desktop veiw</p>
       </div>
       
       {/* <div id='desktop' className='mx-auto p-8 relative top-[20%] h-[500px] w-[90%] flex flex-col items-center bg-slate-600 sm:hidden'>
